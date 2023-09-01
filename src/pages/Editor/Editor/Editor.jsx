@@ -5,6 +5,7 @@ import tinymce from 'tinymce/tinymce.min.js';
 const Editor = ({ value, onChange }) => {
   const [editor, setEditor] = useState(null);
 
+
   useEffect(() => {
     tinymce.init({
       selector: '#editor',

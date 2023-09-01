@@ -6,6 +6,9 @@ export default {
   ],
   daisyui: {
     themes: ["light", "dark", "cupcake"],
+    fontFamily: {
+      roboto: ['Roboto', 'sans-serif']
+    }
   },
   plugins: [require("daisyui")],
 }

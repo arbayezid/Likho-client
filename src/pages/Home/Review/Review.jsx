@@ -25,7 +25,7 @@ const Review = () => {
             <h3 className="text-blue-950 font-bold text-xl lg:text-4xl md:text-2xl text-center m-10">
                 What do our customers say about us? Reviews.
             </h3>
-            <p className="text-center text-gray-500 font-medium m-5">
+            <p className="text-center text-xl text-gray-500 font-medium m-5">
                 Customer Review Sites are now an integral part of every customer journey. It is, therefore, essential for companies to <br />deal extensively with rating portals. Here are some suggestions.
             </p>
             <Container>

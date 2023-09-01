@@ -20,7 +20,7 @@ const Developer = () => {
             <Container>
                 <h2 className='text-5xl text- font-bold font-mono text-blue-950 text-center mb-12'>Meet Our <span className='font-extrabold text-gray-700 font-mono'>Team</span></h2>
 
-                <div className="grid-cols-7 grid lg:mx-80 items-center text-center uppercase font-bold text-xs mb-14 justify-center gap-0">
+                <div className="lg:grid-cols-7 grid sm:mb-3 mb-4 grid-cols-1    items-center text-center uppercase font-bold text-xs  justify-center gap-0">
                     <p className='bg-orange-400 w-20 rounded-sm text-slate-100 font-sans'>Leadership</p>
                     <p>Client services</p>
                     <p>creative</p>

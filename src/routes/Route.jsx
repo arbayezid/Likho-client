@@ -7,10 +7,22 @@ import Navbar from "../Navbar/Navbar";
 import LogIn from "../pages/LogIn/LogIn";
 import SignUp from "../pages/SignUp/SignUp";
 import Editor from "../pages/Editor/Editor/Editor";
-import UserDashboard from "../pages/Dashboard/UserDashboard/UserDashboard";
+
+import Dashboard from "../pages/Dashboard/Dashboard";
 import ProfileDetails from "../pages/Profile/ProfileDetails";
 import MyProfile from "../pages/Profile/MyProfile";
 import ForgotPassword from "../pages/Home/ForgotPassword/ForgotPassword";
+import UpdateProfile from "../pages/Profile/UpdateProfile";
+import ChatContainer from "../pages/RealTimeChatInfo/ChatContainer";
+import Blog from "../pages/shared/Blog/Blog";
+
+import DashBoardSent from "../pages/Dashboard/DashBoardSent/DashBoardSent";
+import DashBoardInbox from "../pages/Dashboard/DashBoardInbox/DashBoardInbox";
+import DashBoardTemplate from "../pages/Dashboard/DashBoardTemplate/DashBoardTemplate";
+import DashDocument from "../pages/DashDocument/DashDocument";
+import CustomEditor from "../pages/Dashboard/PersonalDashboard/CustomEditor/CustomEditor";
+import Drag from "../pages/Drag&Drop/Drag";
+import Drags from "../pages/DragInAccount/Drags";
 
 
 
@@ -44,17 +56,63 @@ const router = createBrowserRouter([
         element: <ProfileDetails></ProfileDetails>
       },
       {
+        path: '/rich',
+        element: <CustomEditor></CustomEditor>
+      },
+      
+      {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: () => fetch(`http://localhost:5000/users`)
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
       },
       {
         path:'/dashboard',
-        element:<UserDashboard></UserDashboard>
+        element:<Dashboard></Dashboard>,
+        children:[
+          {
+            path:'newDoc',
+            element:<DashDocument></DashDocument>
+          },
+          {
+            path:'inbox',
+            element:<DashBoardInbox></DashBoardInbox>
+          },
+          
+          {
+            path:'sent',
+            element:<DashBoardSent></DashBoardSent>
+          },
+          {
+            path:'template',
+            element:<DashBoardTemplate></DashBoardTemplate>
+          },
+          // {
+            
+          // }
+          
+        ]
+
       },
       {
         path:'/editor',
         element:<Editor></Editor>
+      },
+      {
+        path: "/updateProfile/:id",
+        element: <UpdateProfile></UpdateProfile>,
+        loader:({params})=>
+        fetch(`http://localhost:5000/users/${params.id}`)
+},
+       { path:"/chat",
+        element: <ChatContainer></ChatContainer>
+      },
+      {
+        path: 'blog',
+        element: <Blog></Blog>
+      },
+      {
+        path:'dash',
+        element:''
       }
     ]
   },

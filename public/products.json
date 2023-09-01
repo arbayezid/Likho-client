@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "xyr756d",
+        "title": "Edit Docs",
+        "description": "Get a professional editor! Explore Features Find out what Inkscape is capable of.",
+        "image": "https://i.ibb.co/5cfgL0h/image.png",
+        "learnMoreLink": "https://example.com/point1"
+    },
+    {
+        "_id": "kyfgrbm9970h56454gbj",
+        "title": "Template",
+        "description": "Create your dream website today with Likho's free, attractive, and professionally made website templates..",
+        "image": "https://i.ibb.co/KymXcCL/crr.png",
+        "learnMoreLink": "https://example.com/point2"
+    },
+    {
+        "_id": "jklre1234abc5678defg",
+        "title": "LIKHO Assistant",
+        "description": "Explore the features and potential benefits of website Chatbot.",
+        "image": "https://i.ibb.co/ZS0Vbcq/image.png",
+        "learnMoreLink": "https://example.com/point3"
+    },
+    {
+        "_id": "zxcv5678qwer9012uiop",
+        "title": "Likho Features",
+        "description": "Easy Navigation Is the Most Useful docs-type Website Feature.",
+        "image": "https://i.ibb.co/t8v62W4/image.png",
+        "learnMoreLink": "https://example.com/point4"
+    }
+]

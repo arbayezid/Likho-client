@@ -10,11 +10,13 @@ const useUser = () => {
     const {data: isUser, isLoading:isAdminLoading} = useQuery({
         queryKey:['isUser', user?.email],
         queryFn: async()=>{
-            const res = axios.get(`http://localhost:5000/general/user/${user.email}`)
+            const res = await axios.get(`http://localhost:5000/general/user/${user.email}`)
 
-            return res.data.admin
+            return res.data.user
         }
     })
+
+    console.log('user response' ,isUser)
 
     return [isUser, isAdminLoading]
 

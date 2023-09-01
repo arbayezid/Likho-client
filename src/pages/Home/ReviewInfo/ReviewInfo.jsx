@@ -7,8 +7,8 @@ const ReviewInfo = ({ reviewDetails }) => {
     const { author_name, country, author_comment, img, rating } = reviewDetails;
 
     return (
-        <div className="mt-10 border border-stone-400 p-5 rounded-lg relative bg-gray-700 ">
-            <div className="flex items-center mb-5 gap-6 text-gray-300">
+        <div className="mt-10  p-5 rounded-lg relative bg-white shadow-xl">
+            <div className="flex items-center mb-5 gap-6 text-black">
                 <img className="w-11 h-11 rounded-full" src={img} alt={author_name} />
                 <div>
                     <p className="font-semibold text-xl">{author_name}</p>
@@ -16,7 +16,7 @@ const ReviewInfo = ({ reviewDetails }) => {
                 </div>
             </div>
 
-            <p className="text-slate-300 px-2 mb-5">
+            <p className="text-black px-2 mb-5">
                 "{author_comment && author_comment.length > 190
                     ? `${author_comment.slice(0, 190)}...`
                     : author_comment}  "
@@ -24,7 +24,7 @@ const ReviewInfo = ({ reviewDetails }) => {
 
 
             <div className="flex items-center mb-8 px-2 gap-2 ">
-                <p className=""> <span className="text-slate-300 font-medium">Rating:  </span>  </p>
+                <p className=""> <span className="text-black font-medium">Rating:  </span>  </p>
                 <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
                 <span className='ms-2 text-white font-medium font-mono'>({rating})</span>
             </div>
