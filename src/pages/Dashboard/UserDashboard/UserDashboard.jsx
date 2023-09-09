@@ -26,8 +26,12 @@ import Drags from '../../DragInAccount/Drags';
 import DashDocument from '../../DashDocument/DashDocument';
 import { Send } from '@mui/icons-material';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import DashBoardTemplate from '../DashBoardTemplate/DashBoardTemplate';
-import { CgTemplate } from 'react-icons/Cg';
+import DashBoardSent from '../DashBoardSent/DashBoardSent';
+import { Avatar } from '@mui/material';
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+import MyProfile from '../../Profile/MyProfile';
+import UpdateProfile from '../../Profile/UpdateProfile';
 
 
 const drawerWidth = 240;
@@ -102,6 +106,8 @@ export default function UserDashboard() {
     const [open, setOpen] = useState(false);
     const [menuData, setMenuData] = useState('NewDoc')
 
+    const {user } = useContext(AuthContext)
+
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -116,12 +122,12 @@ export default function UserDashboard() {
                 <Account></Account>
                 <Box sx={{ display: 'flex' }}>
                     <CssBaseline />
-                    <AppBar position="fixed" elevation={4} sx={{ bgcolor: '#ffffff' }}>
+                    <AppBar position="fixed" open={open} elevation={4} sx={{ bgcolor: '#ffffff' }}>
                         <Toolbar>
                             <IconButton
                                 color="bg-[#B9B4C7]"
                                 aria-label="open drawer"
-                                onClick={() => setOpen(!open)}
+                                onClick={handleDrawerOpen}
                                 edge="start"
                             // sx={{
                             //     marginRight: 5,
@@ -130,8 +136,16 @@ export default function UserDashboard() {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <Typography variant="h6" noWrap component="div">
-
+                            <Typography variant="h6" noWrap component="div" sx={{height:60, m:3}}>
+                                <div className='lg:flex'>
+                                    <div>
+                                        <Avatar alt="Cindy Baker" src={user?.photoURL} />
+                                    </div>
+                                    <div className='text-black ml-4'>
+                                        <div>{user?.displayName}</div>
+                                        <div>{user?.email}</div>
+                                    </div>
+                                </div>
                             </Typography>
                         </Toolbar>
                     </AppBar>
@@ -187,7 +201,7 @@ export default function UserDashboard() {
                             </ListItem>
                         </List>
                         <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('Sent')}>
+                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('sent')}>
                                 <ListItemButton
                                     sx={{
                                         minHeight: 48,
@@ -224,7 +238,7 @@ export default function UserDashboard() {
                                             justifyContent: 'center',
                                         }}
                                     >
-                                        {<DocumentScannerIcon/>}
+                                        {<DocumentScannerIcon />}
                                     </ListItemIcon>
                                     <ListItemText primary='Document' sx={{ opacity: open ? 1 : 0 }} />
                                 </ListItemButton>
@@ -255,37 +269,14 @@ export default function UserDashboard() {
                         </List>
 
 
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('dashBoardTemplate')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<CgTemplate/>}
-                                    </ListItemIcon>
-                                    <ListItemText primary='DashBoardTemplate' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-
-
                     </Drawer>
                     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                         <DrawerHeader />
 
                         {menuData == 'NewDoc' && <Drags></Drags>}
                         {menuData == 'document' && <DashDocument></DashDocument>}
-                        {menuData == 'dashBoardTemplate' && <DashBoardTemplate></DashBoardTemplate>}
+                        {menuData == 'sent' && <DashBoardSent></DashBoardSent>}
+                        {menuData == 'setting' && <UpdateProfile></UpdateProfile> }
 
 
                     </Box>
