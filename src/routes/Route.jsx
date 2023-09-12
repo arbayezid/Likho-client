@@ -1,7 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../Main/Main";
 import MainLayout from "../Layout/MainLayout";
-import Navbar from "../Navbar/Navbar";
+import {v4 as uuid} from 'uuid'
+
 
 
 import LogIn from "../pages/LogIn/LogIn";
@@ -20,9 +21,18 @@ import DashBoardSent from "../pages/Dashboard/DashBoardSent/DashBoardSent";
 import DashBoardInbox from "../pages/Dashboard/DashBoardInbox/DashBoardInbox";
 import DashBoardTemplate from "../pages/Dashboard/DashBoardTemplate/DashBoardTemplate";
 import DashDocument from "../pages/DashDocument/DashDocument";
+
 import CustomEditor from "../pages/Dashboard/PersonalDashboard/CustomEditor/CustomEditor";
 import Drag from "../pages/Drag&Drop/Drag";
 import Drags from "../pages/DragInAccount/Drags";
+import VideoHomepage from "../pages/VideoChat/VideoHomepage";
+import VideoRoompage from "../pages/VideoChat/VideoRoompage";
+import DocEditor from "../pages/Final-Editor/DocEditor";
+import Navbar from "../pages/Navbar/Navbar";
+import Features from "../pages/LikhoEditor7.1/Features/Features";
+import CreateBlog from "../pages/CreateBlog/CreateBlog";
+import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
+
 
 
 
@@ -53,43 +63,55 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <ProfileDetails></ProfileDetails>
+        element: <UpdateProfile></UpdateProfile>
       },
       {
-        path: '/rich',
+        path: '/editor',
         element: <CustomEditor></CustomEditor>
+      },
+      {
+        path: '/doc',
+        element:<DocEditor></DocEditor>
+      },
+      {
+        path: '/',
+        element: <Navigate replace to={`/doc/${uuid()}`} />
       },
       
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+        loader: ({ params }) => fetch(`https://likho-backend.vercel.app/users/${params.id}`)
       },
       {
-        path:'/dashboard',
-        element:<Dashboard></Dashboard>,
-        children:[
+        path: 'template',
+        element: <DashBoardTemplate></DashBoardTemplate>
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
           {
-            path:'newDoc',
-            element:<DashDocument></DashDocument>
+            path: 'newDoc',
+            element: <DashDocument></DashDocument>
           },
           {
-            path:'inbox',
-            element:<DashBoardInbox></DashBoardInbox>
+            path: 'inbox',
+            element: <DashBoardInbox></DashBoardInbox>
           },
-          
+
           {
-            path:'sent',
-            element:<DashBoardSent></DashBoardSent>
-          },
-          {
-            path:'template',
-            element:<DashBoardTemplate></DashBoardTemplate>
+            path: 'sent',
+            element: <DashBoardSent></DashBoardSent>
           },
           // {
-            
+          //   path:'template',
+          //   element:<DashBoardTemplate></DashBoardTemplate>
+          // },
+          // {
+
           // }
-          
+
         ]
 
       },
@@ -100,10 +122,11 @@ const router = createBrowserRouter([
       {
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
-        loader:({params})=>
-        fetch(`http://localhost:5000/users/${params.id}`)
-},
-       { path:"/chat",
+        loader: ({ params }) =>
+          fetch(`https://likho-backend.vercel.app/users/${params.id}`)
+      },
+      {
+        path: "/chat",
         element: <ChatContainer></ChatContainer>
       },
       {
@@ -111,8 +134,25 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path:'dash',
-        element:''
+        path: 'mathfeatures',
+        element: <MathFeatures></MathFeatures>
+      },
+      
+      {
+        path: 'dash',
+        element: ''
+      },
+      {
+        path: "/room",
+        element: <VideoHomepage></VideoHomepage>
+      },
+      {
+        path: "/room/:roomID",
+        element: <VideoRoompage></VideoRoompage>
+      },
+      {
+        path: 'features',
+        element: <Features></Features>
       }
     ]
   },

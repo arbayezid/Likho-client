@@ -26,7 +26,7 @@ import { Link } from 'react-router-dom';
 const Drags = () => {
     return (
         <div>
-            <div>
+            <div className='lg:ml:20'>
 
                 <h1 className='text-3xl'>Create New Document</h1>
                 <hr className='my-5'/>
@@ -36,22 +36,22 @@ const Drags = () => {
                 <div className='grid lg:grid-cols-2  gap-0'>
                     <div className='w-3/5  justify-center items-center'>
                         <div className='border rounded-md mt-8'>
-                            <div className='border p-2 px-1   border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
+                            <div className='border p-2 px-2 py-4  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                 <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'><FaDochub ></FaDochub> <p>your Document</p></Link>
                             </div>
-                            <div className='border p-2 px-1  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
+                            <div className='border p-2 px-2 py-4 border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'> <FaLink></FaLink> <p>URL</p></Link>
                             </div>
-                            <div className='border p-2 px-1  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
+                            <div className='border p-2 px-2 py-4 border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                 <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'><FaDropbox></FaDropbox> <p>Drop Box</p></Link>
                             </div>
-                            <div className='border p-2 px-1  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
+                            <div className='border p-2 px-2 py-4 border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'> <FaGoogleDrive></FaGoogleDrive> <p>Google Drive</p></Link>
                             </div>
-                            <div className='border p-2 px-1  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
+                            <div className='border p-2 px-2 py-4 border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                 <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'><FaCloud></FaCloud> <p>One Drive</p></Link>
                             </div>
-                            <div className='border p-2 px-1  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
+                            <div className='border p-2 px-2 py-4 border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'> <FaBox></FaBox></Link>
                             </div>
 

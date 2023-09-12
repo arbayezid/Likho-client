@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC2DCsCZ0eBCKPKs_Q5Cd18JoSIJexQnLQ",
-    authDomain: "example-build.firebaseapp.com",
-    projectId: "example-build",
-    storageBucket: "example-build.appspot.com",
-    messagingSenderId: "397986997252",
-    appId: "1:397986997252:web:82f10f21e29525bd284151"
-};
+    apiKey: "AIzaSyAxu6SgodR-g9wJN1yCAWYJb4LyX9JbHcI",
+    authDomain: "likho-7e3d6.firebaseapp.com",
+    projectId: "likho-7e3d6",
+    storageBucket: "likho-7e3d6.appspot.com",
+    messagingSenderId: "40211460818",
+    appId: "1:40211460818:web:8916da241c4fc86215b30b"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

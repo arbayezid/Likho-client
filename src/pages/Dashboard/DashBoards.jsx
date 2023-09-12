@@ -106,22 +106,22 @@ export default function DashBoards() {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed" elevation={4} sx={{bgcolor:'#ffffff'}}>
+            <AppBar position="fixed" elevation={4} sx={{ bgcolor: '#ffffff' }}>
                 <Toolbar>
                     <IconButton
                         color="bg-[#B9B4C7]"
                         aria-label="open drawer"
-                        onClick={()=>setOpen(!open)}
+                        onClick={() => setOpen(!open)}
                         edge="start"
-                        // sx={{
-                        //     marginRight: 5,
-                        //     ...(open && { display: 'none' }),
-                        // }}
+                    // sx={{
+                    //     marginRight: 5,
+                    //     ...(open && { display: 'none' }),
+                    // }}
                     >
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                       
+
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -133,7 +133,7 @@ export default function DashBoards() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('NewDoc')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('NewDoc')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -155,7 +155,7 @@ export default function DashBoards() {
                     </ListItem>
                 </List>
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('personal')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('personal')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -177,7 +177,7 @@ export default function DashBoards() {
                     </ListItem>
                 </List>
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Inbox')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('Inbox')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -199,7 +199,7 @@ export default function DashBoards() {
                     </ListItem>
                 </List>
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Sent')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('Sent')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -222,7 +222,7 @@ export default function DashBoards() {
                 </List>
                 <Divider />
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('setting')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('setting')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,

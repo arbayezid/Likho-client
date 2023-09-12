@@ -5,7 +5,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 const Instruction = () => {
     return (
         <Container>
-            <div className='mt-20 w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-center space-x-16'>
+            <div className='mt-20 w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-center space-x-16 font-poppins'>
             <div>
                 <h2 className='text-4xl text-blue-950 font-bold'>How to Edit PDF Online</h2>
                 <div className="">

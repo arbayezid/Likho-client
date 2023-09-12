@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 
 const MarqueeSection = () => {
     return (
-        <div className=' bg-orange-50 pb-20'>
+        <div className=' bg-gray-100 pb-20'>
             <p className='text-center text-4xl text-blue-950 font-bold pt-20'>Locate Your File</p>
             <Marquee speed={100}  className='mt-12'>
                 <div className='mx-20'>

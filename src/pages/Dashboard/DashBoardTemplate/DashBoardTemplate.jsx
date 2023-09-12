@@ -1,9 +1,11 @@
 import React from 'react';
 import { BsHouseAdd, BsArrowRight, BsPencil } from 'react-icons/Bs';
 import { HiOutlineDocumentAdd, HiOutlineDocumentText } from 'react-icons/Hi';
+
 import { Link } from 'react-router-dom';
 
 const DashBoardTemplate = () => {
+   
     return (
         <div className='' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh', width: '80rem' }} >
             <div >

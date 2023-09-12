@@ -1,15 +1,18 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   daisyui: {
     themes: ["light", "dark", "cupcake"],
-    fontFamily: {
-      roboto: ['Roboto', 'sans-serif']
-    }
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [require("daisyui")],
 }
-

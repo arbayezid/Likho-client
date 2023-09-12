@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { useState } from 'react';
 import { styled, useTheme } from '@mui/material/styles';
@@ -26,12 +27,11 @@ import Drags from '../../DragInAccount/Drags';
 import DashDocument from '../../DashDocument/DashDocument';
 import { Send } from '@mui/icons-material';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import DashBoardSent from '../DashBoardSent/DashBoardSent';
-import { Avatar } from '@mui/material';
+import DashBoardTemplate from '../DashBoardTemplate/DashBoardTemplate';
+import { CgTemplate } from 'react-icons/Cg';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-import MyProfile from '../../Profile/MyProfile';
-import UpdateProfile from '../../Profile/UpdateProfile';
+import { Avatar } from '@mui/material';
 
 
 const drawerWidth = 240;
@@ -106,7 +106,7 @@ export default function UserDashboard() {
     const [open, setOpen] = useState(false);
     const [menuData, setMenuData] = useState('NewDoc')
 
-    const {user } = useContext(AuthContext)
+    const {user } = useContext (AuthContext)
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -269,14 +269,37 @@ export default function UserDashboard() {
                         </List>
 
 
+                        <List>
+                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('dashBoardTemplate')}>
+                                <ListItemButton
+                                    sx={{
+                                        minHeight: 48,
+                                        justifyContent: open ? 'initial' : 'center',
+                                        px: 2.5,
+                                    }}
+                                >
+                                    <ListItemIcon
+                                        sx={{
+                                            minWidth: 0,
+                                            mr: open ? 3 : 'auto',
+                                            justifyContent: 'center',
+                                        }}
+                                    >
+                                        {<CgTemplate/>}
+                                    </ListItemIcon>
+                                    <ListItemText primary='DashBoardTemplate' sx={{ opacity: open ? 1 : 0 }} />
+                                </ListItemButton>
+                            </ListItem>
+                        </List>
+
+
                     </Drawer>
                     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                         <DrawerHeader />
 
                         {menuData == 'NewDoc' && <Drags></Drags>}
                         {menuData == 'document' && <DashDocument></DashDocument>}
-                        {menuData == 'sent' && <DashBoardSent></DashBoardSent>}
-                        {menuData == 'setting' && <UpdateProfile></UpdateProfile> }
+                        {menuData == 'dashBoardTemplate' && <DashBoardTemplate></DashBoardTemplate>}
 
 
                     </Box>

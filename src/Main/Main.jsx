@@ -10,6 +10,7 @@ import Review from "../pages/Home/Review/Review";
 import Instruction from "../pages/Instruction/Instruction";
 import MarqueeSection from "../pages/MarqueeSection/MarqueeSection";
 import CreativeWorkShop from "../pages/Mesbah/CreativeWorkShop/CreativeWorkShop";
+import NotesText from "../pages/NotesText/NotesText";
 import ReadSection from "../pages/ReadSection/ReadSection";
 import ChatContainer from "../pages/RealTimeChatInfo/ChatContainer";
 import TemplateSection from "../pages/Template/TemplateSection";
@@ -21,7 +22,8 @@ const Main = () => {
     return (
         <div>
             <Drag></Drag>
-            <EditDocs></EditDocs>
+            {/* <EditDocs></EditDocs> */}
+            <NotesText></NotesText>
             <TemplateSection></TemplateSection>
             <CreativeWorkShop></CreativeWorkShop>
             <ProductsLevelUI></ProductsLevelUI>

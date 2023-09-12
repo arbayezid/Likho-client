@@ -4,12 +4,12 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../pages/Providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
 
-const Navbar = () => {
+const NavigationBar = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   const [dbUser, setDbUser] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`https://likho-backend.vercel.app/users/${user?.email}`)
         .then(res => res.json())
         .then(data => setDbUser(data)
 
@@ -85,7 +85,7 @@ console.log(dbUser);
             </div>
 
             <Link to={"/"} className="text-3xl">
-              <span className="bg-blue-400 p-1  rounded">L</span>ikho
+              <span className="bg-white-400 p-1  rounded">L</span>ikho
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex ">
@@ -158,6 +158,9 @@ console.log(dbUser);
                     >
                       Dashboard
                     </Link>
+
+                    
+                    
                     <Link
                       onClick={handleLogOut}
                       className="font-normal hover:font-semibold"
@@ -180,4 +183,4 @@ console.log(dbUser);
   );
 };
 
-export default Navbar
+export default NavigationBar;

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React from 'react';
 
 const saveUser = (user) => {
     console.log(user)
@@ -10,7 +9,7 @@ const saveUser = (user) => {
         name: user.displayName
     }
 
-    axios.put(`http://localhost:5000/users/${user?.email}`, currentUser)
+    axios.put(`https://likho-backend.vercel.app/users/${user?.email}`, currentUser)
         .then(data => {
             console.log(data)
         })

@@ -16,11 +16,11 @@ const Developer = () => {
     }, [])
 
     return (
-        <div className="mb-20">
+        <div className="mb-20 font-poppins">
             <Container>
-                <h2 className='text-5xl text- font-bold font-mono text-blue-950 text-center mb-12'>Meet Our <span className='font-extrabold text-gray-700 font-mono'>Team</span></h2>
+                <h2 className='text-5xl text- font-semibold font-poppins text-blue-950 text-center mb-12'>Meet Our Team </h2>
 
-                <div className="lg:grid-cols-7 grid sm:mb-3 mb-4 grid-cols-1    items-center text-center uppercase font-bold text-xs  justify-center gap-0">
+                <div className="lg:grid-cols-7 grid sm:mb-3 grid-cols-1    items-center text-center uppercase font-bold text-xs  justify-center gap-0">
                     <p className='bg-orange-400 w-20 rounded-sm text-slate-100 font-sans'>Leadership</p>
                     <p>Client services</p>
                     <p>creative</p>
@@ -54,7 +54,7 @@ const Developer = () => {
                                 {devs.map(dev => (
                                     <SwiperSlide key={dev.id} className='swiper-slide'>
 
-                                        <div className='swiper-msg z-10 shadow-lg mb-6 p-6'>
+                                        <div className='swiper-msg z-10 shadow-lg mb-6 p-6 mt-7'>
                                             <FaQuoteLeft className='mx-auto text-3xl mb-3 text-orange-500' />
                                             <p className='text-gray-700 font-sans'>
                                                 {dev?.description.length > 500
@@ -64,7 +64,7 @@ const Developer = () => {
                                             </p>
                                         </div>
 
-                                        <div className='flex items-center gap-3 md:flex-row  justify-center pt-10 mb-20'>
+                                        <div className='flex items-center gap-3 md:flex-row  justify-center pt-10 mb-20 '>
                                             <div className='border-2 border-blue-300 rounded-full '>
                                                 <img className=' w-10 h-10 md:w-16 md:h-16 rounded-full' src={dev?.image} alt={dev?.name} />
                                             </div>

@@ -28,8 +28,9 @@ const RotatingImage = styled.img`
 
 const Drag = () => {
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800">
-      {/* ... existing content ... */}
+    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 font-poppins">
+            {/* ... existing content ... */}
+
       <div
         className="absolute inset-0 bg-cover bg-center  lg:pt-20 h-[730px]"
         style={{
@@ -46,25 +47,20 @@ const Drag = () => {
       ></div>
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col pt-44 z-10 space-y-3 lg:space-y-28">
+      <div className="absolute inset-0 flex flex-col lg:pt-44 z-10 space-y-3 lg:space-y-28">
+                {/* ... Your content ... */}
 
-        {/* ... Your content ... */}
 
-
-        <div className="sm:text-left lg:mx-4 xl:mx-28 ">
-          <h6 className="text-3xl sm:text-5xl md:text-7xl md:px-10 text-gray-200 py-4 font-semibold">
-            Elevate Your Documents with LIKHO's <br /> Free Online Editing
+                <div className="sm:text-left lg:mx-4 xl:mx-28 ">
+          <h6 className="text-3xl sm:text-5xl md:text-7xl md:px-10 text-gray-200 py-4 font-semibold px-3">
+            Elevate Your Documents with LIKHOs <br /> Free Online Editing
           </h6>
-          <p className="md:px-10 py-4">
+          <p className="md:px-10 py-4 px-3">
             <TextAnimation />
           </p>
         </div>
 
-
-
-
-
-        <div className="sm:pb-4 md:pb-8 lg:pb-14">
+        <div className="sm:pb-4 md:pb-8 lg:pb-14 font-poppins">
           <div className="z-10 bg-blue-200 p-4 rounded-lg mx-4 md:mx-auto md:w-[80%] lg:w-[50%]">
             <Upload.Dragger
               action="http://localhost:5173/"
@@ -98,21 +94,21 @@ const Drag = () => {
               <div className="flex justify-center items-center mb-4">
                 <RotatingImage className="w-12 h-14" src={wordIcon} alt="" />
               </div>
-              <h4 className="text-4xl text-blue-950 font-bold text-center">
+              <h4 className="lg:text-4xl md:text-3xl text-2xl text-blue-950 font-bold text-center font-poppins">
                 Drag and drop document here to upload
               </h4>
               <br />
 
 
 
-              <button className=" mb-4 border-1 shadow-md border-blue-900 hover:border-blue-700 bg-gradient-to-br from-blue-700 to-blue-500 rounded-lg p-2 px-4 text-xs hover:animate-pulse font-semibold text-gray-200 transition-opacity duration-5000" >
+              <button className=" mb-4 border-1 shadow-md bg-purple-700 hover:bg-purple-800 font-poppins rounded-lg p-2 px-4 text-xs hover:animate-pulse font-semibold text-gray-200 transition-opacity duration-5000" >
 
                 <div className="flex  gap-3 text-center items-center justify-center">
-                <FaUpload className='text-blue-950 text-xl ' />
+                  <FaUpload className='text-gray-300 text-xl ' />
 
-<span>Click to Upload</span>
+                  <span>Click to Upload</span>
                 </div>
-      
+
 
               </button>
 

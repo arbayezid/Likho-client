@@ -1,45 +1,44 @@
 [
-    {
-      "id": 1,
-      "image": "https://i.ibb.co/tJVD66R/asish.png",
-      "name": "Himalay Bala Asish",
-      "title": "Software Engineer",
-      "description": "Experienced software engineer with a passion for backend development and system architecture. At Likho, our front-end developers are artisans of the digital realm. Infusing each line of code with creativity,  commitment to usability"
-    },
-    {
-      "id": 2,
-      "image": "https://i.ibb.co/44YDyHy/Ataullah-Mesbah.png",
-      "name": "Ataullah Mesbah",
-      "title": "Frontend Developer",
-      "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
-    },
-    {
-      "id": 3,
-      "image": "https://i.ibb.co/19SjWpg/bayezid.jpg",
-      "name": "Abdur Rahman Bayezid",
-      "title": "Full Stack Developer",
-      "description": "Full stack developer with a knack for designing responsive and dynamic web applications. In a world where user interactions depend on the back-end machinery, we're committed to delivering reliable, performant, and dynamic systems."
-    },
-    {
-      "id": 4,
-      "image": "https://i.ibb.co/kS5JW2p/Chayon-adhikary.png",
-      "name": "Chayon Adhikary",
-      "title": "DevOps Engineer",
-      "description": "DevOps engineer passionate about optimizing development workflows and ensuring seamless deployments. In a world where user interactions depend on the back-end machinery, we're committed to delivering reliable, performant, and dynamic systems. "
-    },
-    {
-      "id": 5,
-      "image": "https://i.ibb.co/BKGjDs8/joydev.jpg",
-      "name": "Joy Shutradhar",
-      "title": "Backend Developer",
-      "description": "Backend developer specializing in crafting efficient and scalable server-side solutions. In a world where user interactions depend on the back-end machinery, we're committed to delivering reliable, performant, and dynamic systems."
-    },
-    {
-      "id": 6,
-      "image": "https://i.ibb.co/YhGYXQ6/mehjabin.png",
-      "name": "Mahejabin",
-      "title": "UI/UX Designer",
-      "description": "UI/UX designer with a creative mindset, dedicated to delivering visually appealing and intuitive designs. At Likho, our front-end developers are artisans of the digital's realm. Infusing each line of code with creativity."
-    }
-  ]
-  
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/tJVD66R/asish.png",
+    "name": "Himalay Bala Asish",
+    "title": "Software Engineer",
+    "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/44YDyHy/Ataullah-Mesbah.png",
+    "name": "Ataullah Mesbah",
+    "title": "Frontend Developer",
+    "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/19SjWpg/bayezid.jpg",
+    "name": "Abdur Rahman Bayezid",
+    "title": "Full Stack Developer",
+    "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/kS5JW2p/Chayon-adhikary.png",
+    "name": "Chayon Adhikary",
+    "title": "DevOps Engineer",
+    "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/BKGjDs8/joydev.jpg",
+    "name": "Joy Shutradhar",
+    "title": "Backend Developer",
+    "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/YhGYXQ6/mehjabin.png",
+    "name": "Mahejabin",
+    "title": "UI/UX Designer",
+    "description": "At Likho, our team of dedicated front-end developers is at the heart of creating captivating digital experiences. With a passion for pixel-perfect designs and seamless user interactions, we transform ideas into visually stunning and highly functional web interfaces."
+  }
+]

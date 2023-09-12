@@ -20,7 +20,11 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Drags from '../../DragInAccount/Drags';
+import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
 import DashDocument from '../../DashDocument/DashDocument';
+import { useContext } from 'react';
+import AuthProvider, { AuthContext } from '../../Providers/AuthProvider';
+import { Avatar } from '@mui/material';
 
 
 const drawerWidth = 240;
@@ -90,10 +94,13 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
+
 export default function AdminDashBoard() {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [menuData, setMenuData] = useState('NewDoc')
+
+    const { user } = useContext(AuthContext)
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -106,22 +113,30 @@ export default function AdminDashBoard() {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed" elevation={4} sx={{bgcolor:'#ffffff'}}>
+            <AppBar position="fixed" elevation={4} sx={{ bgcolor: '#ffffff' }}>
                 <Toolbar>
                     <IconButton
                         color="bg-[#B9B4C7]"
                         aria-label="open drawer"
-                        onClick={()=>setOpen(!open)}
+                        onClick={() => setOpen(!open)}
                         edge="start"
-                        // sx={{
-                        //     marginRight: 5,
-                        //     ...(open && { display: 'none' }),
-                        // }}
+                    // sx={{
+                    //     marginRight: 5,
+                    //     ...(open && { display: 'none' }),
+                    // }}
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                       
+                    <Typography variant="h6" noWrap component="div" sx={{height:12 }}>
+                        <div className='lg:flex'>
+                            <div>
+                                <Avatar alt="Cindy Baker" src={user?.photoURL} />
+                            </div>
+                            <div className='flex'>
+                                <div>{user?.displayName}</div>
+                                <div>{user?.email}</div>
+                            </div>
+                        </div>
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -133,7 +148,7 @@ export default function AdminDashBoard() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('NewDoc')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('NewDoc')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -154,30 +169,9 @@ export default function AdminDashBoard() {
                         </ListItemButton>
                     </ListItem>
                 </List>
+
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('personal')}>
-                        <ListItemButton
-                            sx={{
-                                minHeight: 48,
-                                justifyContent: open ? 'initial' : 'center',
-                                px: 2.5,
-                            }}
-                        >
-                            <ListItemIcon
-                                sx={{
-                                    minWidth: 0,
-                                    mr: open ? 3 : 'auto',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                {<MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary='Personal' sx={{ opacity: open ? 1 : 0 }} />
-                        </ListItemButton>
-                    </ListItem>
-                </List>
-                <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Inbox')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('Inbox')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -199,7 +193,7 @@ export default function AdminDashBoard() {
                     </ListItem>
                 </List>
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('Sent')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('Sent')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -220,9 +214,31 @@ export default function AdminDashBoard() {
                         </ListItemButton>
                     </ListItem>
                 </List>
+                <List>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('document')}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: open ? 'initial' : 'center',
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                {<DocumentScannerIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary='Document' sx={{ opacity: open ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+                </List>
                 <Divider />
                 <List>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>setMenuData('setting')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('setting')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -249,8 +265,8 @@ export default function AdminDashBoard() {
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
 
-                {menuData == 'Personal' && <DashDocument></DashDocument> }
-                {menuData == 'NewDoc' && <Drags></Drags> }
+                {menuData == 'document' && <DashDocument></DashDocument>}
+                {menuData == 'NewDoc' && <Drags></Drags>}
 
             </Box>
         </Box>

@@ -19,7 +19,7 @@ const MyProfile = () => {
 
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/users?email=${user?.email}`)
+    //     fetch(`https://likho-backend.vercel.app/users?email=${user?.email}`)
     //         .then(res => res.json())
     //         .then(data => setDbUser(data)
             
@@ -29,7 +29,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://likho-backend.vercel.app/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setDbUser(data)
             
@@ -44,7 +44,7 @@ const MyProfile = () => {
         console.log(updateUserInfo);
           
 
-    //     fetch(`http://localhost:5000/users`, {
+    //     fetch(`https://likho-backend.vercel.app/users`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'
@@ -58,7 +58,7 @@ const MyProfile = () => {
 
 
     return (
-        <div className=' flex justify-center item-center border px-20 py-8 bg-blue-50 ' >
+        <div className=' flex justify-center item-center border px-20  bg-blue-50 mt-10' >
         <div className='mt-16'>
             <h2 className='text-3xl font-semibold mb-5 '>My Profile</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="md:flex gap-10">
