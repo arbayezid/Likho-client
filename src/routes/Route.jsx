@@ -33,6 +33,7 @@ import Features from "../pages/LikhoEditor7.1/Features/Features";
 import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
 import ErrorPage from "../pages/Error/ErrorPage";
+import ContactUs from "../pages/Contact Us/ContactUs";
 
 
 
@@ -83,7 +84,7 @@ const router = createBrowserRouter([
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({ params }) => fetch(`https://likho-backend.vercel.app/users/${params.id}`)
+        loader: ({ params }) => fetch(`https://likho-backend.onrender.com/users/${params.id}`)
       },
       {
         path: 'template',
@@ -97,7 +98,7 @@ const router = createBrowserRouter([
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
         loader: ({ params }) =>
-          fetch(`https://likho-backend.vercel.app/users/${params.id}`)
+          fetch(`https://likho-backend.onrender.com/users/${params.id}`)
       },
       {
         path: "/chat",
@@ -127,6 +128,10 @@ const router = createBrowserRouter([
       {
         path: 'features',
         element: <Features></Features>
+      },
+      {
+        path:"/contact-us",
+        element: <ContactUs></ContactUs>
       }
     ]
   },

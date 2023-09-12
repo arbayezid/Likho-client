@@ -11,6 +11,7 @@
   },
   "proxy": "https://likho-7e3d6.web.app",
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.3",

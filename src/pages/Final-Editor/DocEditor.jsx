@@ -133,7 +133,7 @@ const DocEditor = () => {
             const formData = new FormData();
             formData.append('document', selectedFile);
 
-            const response = await axios.post('https://likho-backend.vercel.app/convert/docx2pdf', formData, {
+            const response = await axios.post('https://likho-backend.onrender.com/convert/docx2pdf', formData, {
                 responseType: 'arraybuffer',
             });
 
