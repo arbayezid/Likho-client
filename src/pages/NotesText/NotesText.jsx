@@ -1,6 +1,6 @@
 //  import { Button } from "antd";
 import Container from "../shared/Container";
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 // import html2pdf from 'html2pdf.js';
 import { useState } from "react";
@@ -9,8 +9,9 @@ import { Link } from "react-router-dom";
 
 const NotesText = () => {
     const [editorContent, setEditorContent] = useState(`
+
     <div className="p-5">
-    <h1 className="text-center mb-5 text-2xl lg:text-5xl text-blue-950 font-poppins font-semibold">🚀 Join Us at the Likho Editor Guest Meetup! 🖋️</h1>
+    <h1 className="text-center mb-5 text-2xl lg:text-5xl text-blue-950 font-poppins font-semibold">🚀 Join Us at the Likho Editor Guest Meetup! 🖋️ </h1>
   
     <p className="text-center text-gray-700 mb-5">📅 Date: [24 - Nov -2023] 🕒 Time: [06:00 PM (BD)] 📍 Location: [Westin, Gulshan, Dhaka]</p>
     
@@ -35,6 +36,10 @@ const NotesText = () => {
   </div>
 `);
 
+// Register the background color format in Quill
+const BackgroundStyle = Quill.import('formats/background');
+Quill.register(BackgroundStyle, true);
+
     // In your component's JSX
     useEffect(() => {
         const editorContentDiv = document.getElementById('editor-content');
@@ -54,19 +59,20 @@ const NotesText = () => {
 
     const modules = {
         toolbar: [
-            ['bold', 'italic', 'underline', 'strike'],
-            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-            ['blockquote', 'code-block'],
-            [{ 'align': [] }],
-            ['link', 'image', 'video'],
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'font': [] }],
-            [{ 'size': ['small', false, 'large', 'huge'] }],
-            ['mathquill'],
-            [{ 'header': '1' }, { 'header': '2' }],
+          ['bold', 'italic', 'underline', 'strike'],
+          [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+          ['blockquote', 'code-block'],
+          [{ 'align': [] }],
+          ['link', 'image', 'video'],
+          [{ 'color': [] }, { 'background': [] }],
+          [{ 'font': [] }],
+          [{ 'size': ['small', false, 'large', 'huge'] }],
+          ['mathquill'],
+          [{ 'header': '1' }, { 'header': '2' }],
+          // Add a custom background color button
+          [{ 'background': ['bg-blue-400', 'bg-red-400', 'bg-green-400', 'bg-yellow-400', 'bg-pink-400'] }],
         ],
-    };
-
+      };
     const formats = [
         'header', 'bold', 'italic', 'underline', 'strike', 'list', 'bullet', 'blockquote',
         'code-block', 'align', 'link', 'image', 'video', 'color', 'background', 'font', 'size', 'mathquill'
@@ -75,39 +81,43 @@ const NotesText = () => {
 
 
     return (
-        <div className="bg-gray-200 font-poppins lg:mt-[-239px]">
-            <div className="lg:pt-56 pt-16 space-y-5 mb-8">
-                <h1 className="text-blue-950 text-center font-semibold lg:text-4xl text-2xl">A versatile rich text editor for all your needs</h1>
-                <p className="text-center text-gray-700">Likho Editor 7.1 empowers users to create diverse content in your app—documents, <br /> reports, emails, notes, and chats with ease.</p>
+        <div className="bg-gray-200 font-poppins">
+            <div className="pt-16 space-y-5 mb-8 px-4 md:px-0">
+
+                <h1 className="text-blue-950 text-center font-semibold lg:text-4xl text-2xl">
+                    A versatile rich text editor for all your needs
+                </h1>
+                <p className="text-center text-gray-700">
+                    Likho Editor 7.1 empowers users to create diverse content in your app—documents, reports, emails, notes, and chats with ease.
+                </p>
 
                 <div className="flex justify-center items-center flex-wrap gap-4">
-                    
-                    <Link to='/features'><button className="text-lg font-poppins px-4 bg-purple-700 hover:bg-purple-800 text-center text-white p-2 rounded-lg">Take Explore</button></Link>
+                    <Link to='/features'>
+                        <button className="text-lg font-poppins px-4 bg-purple-700 hover:bg-purple-800 text-center text-white p-2 rounded-lg">
+                            Take Explore
+                        </button>
+                    </Link>
 
-                    <button className="text-lg font-poppins px-4 hover:bg-blue-100 text-center text-gray-700 font-semibold border border-gray-500 p-2 rounded-lg">Docs Know</button>
+                    <button className="text-lg font-poppins px-4 hover:bg-blue-100 text-center text-gray-700 font-semibold border border-gray-500 p-2 rounded-lg">
+                        Docs Know
+                    </button>
                 </div>
             </div>
 
             <Container>
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center pb-14">
-                    {/* ... Existing content ... */}
-                    {/* ... Existing content ... */}
-
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center pb-14">
                     {/* React Quill editor */}
-                    <div className="p-4">
+                    <div className="p-4 ">
                         <ReactQuill
                             value={editorContent}
                             onChange={handleEditorChange}
                             modules={modules}
                             formats={formats}
                         />
-                        {/* <button onClick={handleSaveAsPDF}>Save as PDF</button> */}
+                      
                     </div>
 
 
-
-
-                    {/* <img className="h-auto sm:h-3/4 border-1 border-black" src="https://i.ibb.co/dgm8CDV/Untitled-1.png" alt="" /> */}
                     <div className="p-4">
                         <div className="collapse collapse-plus">
                             <input type="radio" name="my-accordion-3" checked="checked" />

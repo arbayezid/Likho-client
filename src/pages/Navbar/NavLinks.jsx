@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./Mylinks";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaSortDown } from "react-icons/fa";
 
 
 const NavLinks = () => {
@@ -20,10 +20,10 @@ const NavLinks = () => {
                 setSubHeading("");
               }}
             >
-              <div className="flex font-poppins items-center gap-5">
+              <div className="flex font-poppins justify-center items-center gap-2">
                 <span className=" font-semibold">{link.name}</span>
                 <span className="text-purple-500">
-                  <FaChevronDown className="text-base" name={`${
+                  <FaSortDown className="text-xl" name={`${
                     heading === link.name ? "chevron-up" : "chevron-down"
                   }`} />
                 </span>
@@ -88,7 +88,7 @@ const NavLinks = () => {
                     <div className="flex items-center gap-5">
                       <span className="text-lg">{slinks.Head}</span>
                       <span className="text-purple-500">
-                        <FaChevronDown className="text-base" name={`${
+                        <FaSortDown className="text-base" name={`${
                           subHeading === slinks.Head ? "chevron-up" : "chevron-down"
                         }`} />
                       </span>
