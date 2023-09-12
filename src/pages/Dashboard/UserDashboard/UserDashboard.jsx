@@ -27,11 +27,14 @@ import Drags from '../../DragInAccount/Drags';
 import DashDocument from '../../DashDocument/DashDocument';
 import { Send } from '@mui/icons-material';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import DashBoardTemplate from '../DashBoardTemplate/DashBoardTemplate';
-import { CgTemplate } from 'react-icons/Cg';
+import{LuLayoutTemplate} from 'react-icons/Lu'
+import DashBoardSent from '../DashBoardSent/DashBoardSent';
+import { Avatar } from '@mui/material';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-import { Avatar } from '@mui/material';
+import MyProfile from '../../Profile/MyProfile';
+import UpdateProfile from '../../Profile/UpdateProfile';
+import DashBoardTemplate from '../DashBoardTemplate/DashBoardTemplate';
 
 
 const drawerWidth = 240;
@@ -106,7 +109,7 @@ export default function UserDashboard() {
     const [open, setOpen] = useState(false);
     const [menuData, setMenuData] = useState('NewDoc')
 
-    const {user } = useContext (AuthContext)
+    const {user } = useContext(AuthContext)
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -267,10 +270,8 @@ export default function UserDashboard() {
                                 </ListItemButton>
                             </ListItem>
                         </List>
-
-
                         <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('dashBoardTemplate')}>
+                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('template')}>
                                 <ListItemButton
                                     sx={{
                                         minHeight: 48,
@@ -285,13 +286,12 @@ export default function UserDashboard() {
                                             justifyContent: 'center',
                                         }}
                                     >
-                                        {<CgTemplate/>}
+                                        {<LuLayoutTemplate />}
                                     </ListItemIcon>
-                                    <ListItemText primary='DashBoardTemplate' sx={{ opacity: open ? 1 : 0 }} />
+                                    <ListItemText primary='template' sx={{ opacity: open ? 1 : 0 }} />
                                 </ListItemButton>
                             </ListItem>
                         </List>
-
 
                     </Drawer>
                     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
@@ -299,7 +299,9 @@ export default function UserDashboard() {
 
                         {menuData == 'NewDoc' && <Drags></Drags>}
                         {menuData == 'document' && <DashDocument></DashDocument>}
-                        {menuData == 'dashBoardTemplate' && <DashBoardTemplate></DashBoardTemplate>}
+                        {menuData == 'sent' && <DashBoardSent></DashBoardSent>}
+                        {menuData == 'setting' && <UpdateProfile></UpdateProfile> }
+                        {menuData == 'template' && <DashBoardTemplate></DashBoardTemplate> }
 
 
                     </Box>
@@ -308,3 +310,4 @@ export default function UserDashboard() {
         </>
     );
 }
+

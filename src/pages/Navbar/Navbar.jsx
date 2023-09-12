@@ -16,8 +16,8 @@ const Navbar = () => {
       <div className="flex items-center font-medium justify-between lg:mx-40">
         <div className="z-500 p-5 md:w-auto w-full flex justify-between">
           <div className="flex items-center justify-center gap-4">
-            <img src='https://i.ibb.co/8rbKVY1/image.png' alt="logo" className="md:cursor-pointer h-10" />
-            <Link to='/'><h1 className="font-semibold font-poppins">LikhoEditor</h1></Link>
+            <img src='https://i.ibb.co/h2n597p/linksys-logo-freelogovectors-net.webp' alt="logo" className="md:cursor-pointer h-6" />
+            <Link to='/'><h1 className=" font-bold text-2xl text-blue-950">Likho Editor</h1></Link>
           </div>
           <div className="text-3xl md:hidden" onClick={handleMenuClick}>
             <FaBars className={`text-purple-800`} />
@@ -39,7 +39,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       <ul
         className={`
-          md:hidden bg-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
+          md:hidden bg-white fixed w-1/2 top-0 overflow-y-auto  pl-4
           duration-500 ${open ? "left-0" : "-left-full"}
         `}
       >

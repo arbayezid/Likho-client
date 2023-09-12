@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 
-.container {
+.container.ql-container {
 
     width: 60%;
     background: #fff;

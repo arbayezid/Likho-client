@@ -63,7 +63,7 @@ const Drag = () => {
         <div className="sm:pb-4 md:pb-8 lg:pb-14 font-poppins">
           <div className="z-10 bg-blue-200 p-4 rounded-lg mx-4 md:mx-auto md:w-[80%] lg:w-[50%]">
             <Upload.Dragger
-              action="http://localhost:5173/"
+              action="http://localhost:5176/"
               listType="picture"
               accept=".jpg, .jpeg, .doc"
               beforeUpload={(file) => {

@@ -16,7 +16,7 @@ const VideoRoompage = () => {
             sharedLinks: [
                 {
                     name: "Copy Link",
-                    url: `http://localhost:5173/room/${roomID}`
+                    url: `http://localhost:5176/room/${roomID}`
                 }
             ],
             scenario: {

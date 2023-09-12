@@ -1,7 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../Main/Main";
 import MainLayout from "../Layout/MainLayout";
-import {v4 as uuid} from 'uuid'
+import { v4 as uuid } from 'uuid'
 
 
 
@@ -32,6 +32,7 @@ import Navbar from "../pages/Navbar/Navbar";
 import Features from "../pages/LikhoEditor7.1/Features/Features";
 import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
+import ErrorPage from "../pages/Error/ErrorPage";
 
 
 
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -71,13 +73,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/doc',
-        element:<DocEditor></DocEditor>
+        element: <DocEditor></DocEditor>
       },
       {
         path: '/',
         element: <Navigate replace to={`/doc/${uuid()}`} />
       },
-      
+
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
@@ -88,36 +90,8 @@ const router = createBrowserRouter([
         element: <DashBoardTemplate></DashBoardTemplate>
       },
       {
-        path: '/dashboard',
-        element: <Dashboard></Dashboard>,
-        children: [
-          {
-            path: 'newDoc',
-            element: <DashDocument></DashDocument>
-          },
-          {
-            path: 'inbox',
-            element: <DashBoardInbox></DashBoardInbox>
-          },
-
-          {
-            path: 'sent',
-            element: <DashBoardSent></DashBoardSent>
-          },
-          // {
-          //   path:'template',
-          //   element:<DashBoardTemplate></DashBoardTemplate>
-          // },
-          // {
-
-          // }
-
-        ]
-
-      },
-      {
-        path:'/editor',
-        element:<Editor></Editor>
+        path: '/editor',
+        element: <Editor></Editor>
       },
       {
         path: "/updateProfile/:id",
@@ -137,7 +111,7 @@ const router = createBrowserRouter([
         path: 'mathfeatures',
         element: <MathFeatures></MathFeatures>
       },
-      
+
       {
         path: 'dash',
         element: ''
@@ -155,6 +129,44 @@ const router = createBrowserRouter([
         element: <Features></Features>
       }
     ]
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'newDoc',
+        element: <Drags></Drags>
+      },
+      {
+        path: 'inbox',
+        element: <DashBoardInbox></DashBoardInbox>
+      },
+
+      {
+        path: 'sent',
+        element: <DashBoardSent></DashBoardSent>
+      },
+      {
+        path:'document',
+        element:<DashDocument></DashDocument>
+      },
+      {
+        path:'sent',
+        element:<DashBoardSent></DashBoardSent>
+      },
+      {
+        path:'setting',
+        element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path:'template',
+        element:<DashBoardTemplate></DashBoardTemplate>
+      }
+     
+
+    ]
+
   },
 ]);
 

@@ -1,10 +1,8 @@
 
+import Banner from "../pages/Banner/Banner";
 import Counter from "../pages/Counting doc/Counter";
 import Developer from "../pages/Developer/Developer";
-import Drag from "../pages/Drag&Drop/Drag";
-import EditDocs from "../pages/EditDocs/EditDocs";
 
-import FAQ from "../pages/Home/FAQ/FAQ";
 import ProductsLevelUI from "../pages/Home/ProductLevelUI/ProductsLevelUI";
 import Review from "../pages/Home/Review/Review";
 import Instruction from "../pages/Instruction/Instruction";
@@ -21,8 +19,8 @@ import TemplateSection from "../pages/Template/TemplateSection";
 const Main = () => {
     return (
         <div>
-            <Drag></Drag>
-            {/* <EditDocs></EditDocs> */}
+            <Banner></Banner>
+            
             <NotesText></NotesText>
             <TemplateSection></TemplateSection>
             <CreativeWorkShop></CreativeWorkShop>
