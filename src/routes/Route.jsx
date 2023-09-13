@@ -35,6 +35,8 @@ import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
 import TemplatesDemo from "../pages/TemplatesDemo/TemplatesDemo";
 import TemplatesDetails from "../pages/TemplatesDemo/TemplatesDetails";
 import ErrorPage from "../pages/Error/ErrorPage";
+import ContactUs from "../pages/Contact Us/ContactUs";
+import Help from "../pages/Help Center/Help";
 
 
 
@@ -84,29 +86,7 @@ const router = createBrowserRouter([
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
-      },
-      {
-        path: '/dashboard',
-        element: <Dashboard></Dashboard>,
-        children: [
-          {
-            path: 'newDoc',
-            element: <DashDocument></DashDocument>
-          },
-          {
-            path: 'inbox',
-            element: <DashBoardInbox></DashBoardInbox>
-          },
-
-          {
-            path: 'sent',
-            element: <DashBoardSent></DashBoardSent>
-          },
-          {
-            path: 'template',
-            element: <DashBoardTemplate></DashBoardTemplate>
-          },
+        loader: ({ params }) => fetch(`https://likho-backend.onrender.com/users/${params.id}`)
       },
       {
         path: 'template',
@@ -119,7 +99,8 @@ const router = createBrowserRouter([
       {
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
-        loader: ({ params }) => fetch(`https://likho-backend.vercel.app/users/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`https://likho-backend.onrender.com/users/${params.id}`)
       },
       {
         path: "/chat",
@@ -151,6 +132,14 @@ const router = createBrowserRouter([
         element: <Features></Features>
       },
       {
+        path: "/contact-us",
+        element: <ContactUs></ContactUs>
+      },
+      {
+        path: "/help",
+        element: <Help></Help>
+      },
+      {
         path: 'templatesdemo',
         element: <TemplatesDemo></TemplatesDemo>
       },
@@ -178,22 +167,22 @@ const router = createBrowserRouter([
         element: <DashBoardSent></DashBoardSent>
       },
       {
-        path:'document',
-        element:<DashDocument></DashDocument>
+        path: 'document',
+        element: <DashDocument></DashDocument>
       },
       {
-        path:'sent',
-        element:<DashBoardSent></DashBoardSent>
+        path: 'sent',
+        element: <DashBoardSent></DashBoardSent>
       },
       {
-        path:'setting',
-        element:<UpdateProfile></UpdateProfile>
+        path: 'setting',
+        element: <UpdateProfile></UpdateProfile>
       },
       {
-        path:'template',
-        element:<DashBoardTemplate></DashBoardTemplate>
+        path: 'template',
+        element: <DashBoardTemplate></DashBoardTemplate>
       }
-     
+
 
     ]
 

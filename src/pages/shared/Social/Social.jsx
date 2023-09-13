@@ -15,7 +15,7 @@ const Social = () => {
                 const loggedUser = result.user
                 console.log(loggedUser)
                 // const savedUser = { name: data.name, email: data.email }
-                // fetch('https://likho-backend.vercel.app/users', {
+                // fetch('https://likho-backend.onrender.com/users', {
                 //     method: 'POST',
                 //     headers: {
                 //         'content-type': 'application/json'
