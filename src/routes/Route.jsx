@@ -32,6 +32,8 @@ import Navbar from "../pages/Navbar/Navbar";
 import Features from "../pages/LikhoEditor7.1/Features/Features";
 import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
+import TemplatesDemo from "../pages/TemplatesDemo/TemplatesDemo";
+import TemplatesDetails from "../pages/TemplatesDemo/TemplatesDetails";
 import ErrorPage from "../pages/Error/ErrorPage";
 
 
@@ -79,11 +81,32 @@ const router = createBrowserRouter([
         path: '/',
         element: <Navigate replace to={`/doc/${uuid()}`} />
       },
-
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({ params }) => fetch(`https://likho-backend.vercel.app/users/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: 'newDoc',
+            element: <DashDocument></DashDocument>
+          },
+          {
+            path: 'inbox',
+            element: <DashBoardInbox></DashBoardInbox>
+          },
+
+          {
+            path: 'sent',
+            element: <DashBoardSent></DashBoardSent>
+          },
+          {
+            path: 'template',
+            element: <DashBoardTemplate></DashBoardTemplate>
+          },
       },
       {
         path: 'template',
@@ -96,8 +119,7 @@ const router = createBrowserRouter([
       {
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
-        loader: ({ params }) =>
-          fetch(`https://likho-backend.vercel.app/users/${params.id}`)
+        loader: ({ params }) => fetch(`https://likho-backend.vercel.app/users/${params.id}`)
       },
       {
         path: "/chat",
@@ -127,6 +149,14 @@ const router = createBrowserRouter([
       {
         path: 'features',
         element: <Features></Features>
+      },
+      {
+        path: 'templatesdemo',
+        element: <TemplatesDemo></TemplatesDemo>
+      },
+      {
+        path: 'templatesdetails/:id',
+        element: <TemplatesDetails></TemplatesDetails>
       }
     ]
   },

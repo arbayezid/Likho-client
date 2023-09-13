@@ -55,6 +55,7 @@
     "react-router-dom": "^6.15.0",
     "react-scroll-to-bottom": "^4.2.0",
     "react-simple-typewriter": "^5.0.1",
+    "react-spinners": "^0.13.8",
     "socket.io-client": "^4.7.2",
     "sort-by": "^1.2.0",
     "striptags": "^3.2.0",
