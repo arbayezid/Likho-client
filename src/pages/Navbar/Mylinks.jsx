@@ -98,7 +98,7 @@ export const links = [
         Head: "Support Center 7.1",
         sublink: [
           // { name: "Documentation", link: "/" },
-          { icon: <FaHandsHelping />, name: "Help", link: "/" },
+          { icon: <FaHandsHelping />, name: "Help", link: "/help" },
           { icon: <FaBlenderPhone />, name: "Contact Us", link: "/contact-us" },
 
         ],
