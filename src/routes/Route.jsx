@@ -32,6 +32,8 @@ import Navbar from "../pages/Navbar/Navbar";
 import Features from "../pages/LikhoEditor7.1/Features/Features";
 import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
+import TemplatesDemo from "../pages/TemplatesDemo/TemplatesDemo";
+import TemplatesDetails from "../pages/TemplatesDemo/TemplatesDetails";
 import ErrorPage from "../pages/Error/ErrorPage";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
@@ -81,7 +83,6 @@ const router = createBrowserRouter([
         path: '/',
         element: <Navigate replace to={`/doc/${uuid()}`} />
       },
-
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
@@ -131,12 +132,20 @@ const router = createBrowserRouter([
         element: <Features></Features>
       },
       {
-        path:"/contact-us",
+        path: "/contact-us",
         element: <ContactUs></ContactUs>
       },
       {
-        path:"/help",
+        path: "/help",
         element: <Help></Help>
+      },
+      {
+        path: 'templatesdemo',
+        element: <TemplatesDemo></TemplatesDemo>
+      },
+      {
+        path: 'templatesdetails/:id',
+        element: <TemplatesDetails></TemplatesDetails>
       }
     ]
   },
@@ -158,22 +167,22 @@ const router = createBrowserRouter([
         element: <DashBoardSent></DashBoardSent>
       },
       {
-        path:'document',
-        element:<DashDocument></DashDocument>
+        path: 'document',
+        element: <DashDocument></DashDocument>
       },
       {
-        path:'sent',
-        element:<DashBoardSent></DashBoardSent>
+        path: 'sent',
+        element: <DashBoardSent></DashBoardSent>
       },
       {
-        path:'setting',
-        element:<UpdateProfile></UpdateProfile>
+        path: 'setting',
+        element: <UpdateProfile></UpdateProfile>
       },
       {
-        path:'template',
-        element:<DashBoardTemplate></DashBoardTemplate>
+        path: 'template',
+        element: <DashBoardTemplate></DashBoardTemplate>
       }
-     
+
 
     ]
 

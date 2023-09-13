@@ -1,22 +1,29 @@
 import { useEffect, useState } from "react";
 import Templates from "./Templates";
 import Container from "../shared/Container";
+import useTemplates from "../../hooks/useTemplates";
 
 
 const TemplateSection = () => {
-    const [templates, setTemplates] = useState([]);
+    const [templates] = useTemplates();
+    const threeTemplates = templates.slice(0, 3);
 
-    useEffect(() => {
-        fetch('/templates.json')
-            .then(res => res.json())
-            .then(data => {
-                // Slice the first 3 entries from the data array
-                const slicedtemplates = data.slice(0, 3);
-                setTemplates(slicedtemplates);
-                slicedtemplates(data)
 
-            })
-    }, [])
+
+
+    // const [templates, setTemplates] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('/templates.json')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             // Slice the first 3 entries from the data array
+    //             const slicedtemplates = data.slice(0, 3);
+    //             setTemplates(slicedtemplates);
+    //             slicedtemplates(data)
+
+    //         })
+    // }, [])
 
     return (
         <div className="font-poppins lg:mt-20 space-y-6 lg:mb-16 mt-8 mb-8">
@@ -26,7 +33,7 @@ const TemplateSection = () => {
 
             <Container>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {templates.map((template) => (
+                    {threeTemplates.map((template) => (
                         <Templates key={template._id} template={template} />
                     ))}
                 </div>
