@@ -34,6 +34,7 @@ import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
 import ErrorPage from "../pages/Error/ErrorPage";
 import ContactUs from "../pages/Contact Us/ContactUs";
+import Help from "../pages/Help Center/Help";
 
 
 
@@ -132,6 +133,10 @@ const router = createBrowserRouter([
       {
         path:"/contact-us",
         element: <ContactUs></ContactUs>
+      },
+      {
+        path:"/help",
+        element: <Help></Help>
       }
     ]
   },

@@ -56,7 +56,7 @@ const DocEditor = () => {
     }, [])
 
     useEffect(() => {
-        const socketServer = io('https://likho-doc.up.railway.app/')
+        const socketServer = io('https://likho-backend.onrender.com')
 
         setSocket(socketServer)
 

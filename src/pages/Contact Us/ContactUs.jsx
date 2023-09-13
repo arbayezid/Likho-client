@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaMailBulk, FaPhoneAlt } from "react-icons/fa";
+import { HiLocationMarker, HiOutlineMail } from "react-icons/hi";
 import Swal from 'sweetalert2';
 
 
@@ -16,49 +17,52 @@ const ContactUs = () => {
                     icon: 'success',
                     title: 'Success',
                     text: 'Message Send Successfully',
-                  })
+                })
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
     }
     return (
-        <div className='my-20'>
-            <h2 className='text-3xl font-bold mb-5 text-center'>Contact Me</h2>
-            <div className='md:flex w-full px-16 justify-evenly'>
-                <div className='md:w-1/2 space-y-2' id='about'>
-                    <h2 className='text-2xl font-semibold'>Abdur Rahman Bayezid</h2>
-                    <p>Front-End Developer</p>
-                    <p>I am a Front-End developer with some project experiences.<br /> Contact with me for any queries.</p>
-                    <p>Email: <span className='text-red-500 font-medium'>arbayezid0@gmail.com</span></p>
-                    <p>Phone: <span className='text-red-500 font-medium'>01980626023</span></p>
-                    <div>
-                        <h2 className='text-2xl font-semibold'>Find Me:</h2>
-                        <div className='flex gap-5 mt-4 text-2xl'>
-                            <FaFacebook />
-                            <FaInstagram />
-                            <FaLinkedin />
+        <div className='bg-gray-100 py-20'>
+            <div className='text-center space-y-2'>
+                <h2 className='text-5xl font-bold mb-5'>GET IN TOUCH</h2>
+                <p className='flex justify-center items-center gap-1 font-semibold'> <FaPhoneAlt className='text-xs'></FaPhoneAlt> Phone: <span className='text-purple-500 font-medium'>+8801980005000</span></p>
+                <p className='flex justify-center items-center gap-1 font-semibold'> <HiOutlineMail></HiOutlineMail> Email: <span className='text-purple-500 font-medium'>likhodoc@gmail.com</span></p>
+                <p className='flex justify-center items-center gap-1 font-semibold'> <HiLocationMarker></HiLocationMarker> Address: <span className='text-purple-500 font-medium'> Mirpur-1, Dhaka, Bangladesh</span></p>
+                <div className='flex justify-center gap-5 text-2xl'>
+                    <FaFacebook></FaFacebook>
+                    <FaInstagram></FaInstagram>
+                    <FaLinkedin></FaLinkedin>
+                </div>
+            </div>
+
+            <div className='mt-16' id='contact'>
+                <form ref={form} onSubmit={sendEmail} className='w-full'>
+                    <div className='flex justify-center md:gap-10 gap-5 mx-10'>
+                        <div className='space-y-2'>
+                            <div>
+                                <label className='font-medium text-sm'>Name</label><br />
+                                <input className='md:w-[500px] px-2 py-3 rounded-lg mt-1' type="text" name="user_name" placeholder='Your Name *' required />
+                            </div>
+                            <div>
+                                <label className='font-medium text-sm'>Email</label><br />
+                                <input className='md:w-[500px] px-2 py-3 rounded-lg mt-1' type="email" name="user_email" placeholder='Your Email *' required />
+                            </div>
+                            <div>
+                                <label className='font-medium text-sm'>Phone</label><br />
+                                <input className='md:w-[500px] px-2 py-3 rounded-lg mt-1' type="email" name="user_phone" placeholder='Your Phone' />
+                            </div>
+                        </div>
+                        <div>
+                            <label className='font-medium text-sm'>Message</label><br />
+                            <textarea className='md:w-[500px] h-[218px] p-3 rounded-lg mt-1' name="user_message" placeholder='Your Message *' required />
                         </div>
                     </div>
-                </div>
-
-                <div className='md:w-1/2' id='contact'>
-                    <form ref={form} onSubmit={sendEmail} className='space-y-3'>
-                        <div>
-                            <label className='font-medium'>Name</label><br />
-                            <input className='w-3/4 p-2 rounded-lg' type="text" name="user_name" required/>
-                        </div>
-                        <div>
-                            <label className='font-medium'>Email</label><br />
-                            <input className='w-3/4 p-2 rounded-lg' type="email" name="user_email" required/>
-                        </div>
-                        <div>
-                            <label className='font-medium '>Message</label><br />
-                            <textarea className='w-3/4 p-3 rounded-lg' name="user_message" required/>
-                        </div>
-                        <input className='btn bg-red-500 rounded-lg text-white hover:bg-red-300' type="submit" value="Send" />
-                    </form>
-                </div>
+                    <div className='text-center mt-3'>
+                        <input className='btn bg-purple-600 rounded-lg text-white hover:bg-purple-300' type="submit" value="Send Message" />
+                    </div>
+                </form>
             </div>
         </div>
     );
