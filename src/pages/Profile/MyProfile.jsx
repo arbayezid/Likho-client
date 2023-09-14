@@ -19,7 +19,7 @@ const MyProfile = () => {
 
 
     // useEffect(() => {
-    //     fetch(`https://likho-backend.vercel.app/users?email=${user?.email}`)
+    //     fetch(`https://likho-backend.onrender.com/users?email=${user?.email}`)
     //         .then(res => res.json())
     //         .then(data => setDbUser(data)
             
@@ -29,7 +29,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        fetch(`https://likho-backend.vercel.app/users/${user?.email}`)
+        fetch(`https://likho-backend.onrender.com/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setDbUser(data)
             
@@ -44,7 +44,7 @@ const MyProfile = () => {
         console.log(updateUserInfo);
           
 
-    //     fetch(`https://likho-backend.vercel.app/users`, {
+    //     fetch(`https://likho-backend.onrender.com/users`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'

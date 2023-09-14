@@ -9,7 +9,7 @@ const saveUser = (user) => {
         name: user.displayName
     }
 
-    axios.put(`https://likho-backend.vercel.app/users/${user?.email}`, currentUser)
+    axios.put(`https://likho-backend.onrender.com/users/${user?.email}`, currentUser)
         .then(data => {
             console.log(data)
         })
