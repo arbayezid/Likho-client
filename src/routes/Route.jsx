@@ -34,6 +34,7 @@ import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Stats from "../pages/Dashboard/AdminDashBoard/Stats/Stats";
+import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 
 
 
@@ -163,6 +164,10 @@ const router = createBrowserRouter([
       {
         path:'template',
         element:<DashBoardTemplate></DashBoardTemplate>
+      },
+      {
+        path:'alluser',
+        element:<AllUser></AllUser>
       },
       {
         path:'stats',

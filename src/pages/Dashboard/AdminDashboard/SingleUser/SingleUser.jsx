@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-const SingleUser = () => {
+const SingleUser = ({user}) => {
 
     return (
         <tr>
