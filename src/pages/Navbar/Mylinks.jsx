@@ -1,4 +1,4 @@
-import { FaBlenderPhone, FaCalendarMinus, FaClone, FaCloudDownloadAlt, FaCommentDollar, FaDochub, FaEdit, FaFacebook, FaFileExport, FaFilePdf, FaFileWord, FaHandsHelping, FaHockeyPuck, FaPager, FaPenSquare, FaReadme, FaSimplybuilt, FaSpellCheck, FaStreetView, FaSuitcaseRolling, FaTwitter, FaUserCog } from "react-icons/fa"
+import { FaBlenderPhone, FaBook, FaCalendarMinus, FaClone, FaCloudDownloadAlt, FaCommentDollar, FaDochub, FaEdit, FaFacebook, FaFileExport, FaFilePdf, FaFileWord, FaHandsHelping, FaHockeyPuck, FaPager, FaPenSquare, FaReadme, FaSimplybuilt, FaSpellCheck, FaStreetView, FaSuitcaseRolling, FaTwitter, FaUserCog } from "react-icons/fa"
 
 export const links = [
   {
@@ -17,13 +17,14 @@ export const links = [
         ],
       },
       {
-        Head: "Ultra Features",
+        Head: "Premium Features",
         sublink: [
-          { icon: <FaUserCog />, name: "Collaboration", link: "/" },
+          { icon: <FaUserCog />, name: "Real-Time Collaboration", link: "/" },
+          { icon: <FaBook />, name: "Templates", link: "/templatesdemo" },
           { icon: <FaFilePdf />, name: "Export to PDF/Word", link: "/" },
           { icon: <FaFileWord />, name: "Import from Word", link: "/" },
           { icon: <FaFileExport />, name: "File Management", link: "/" },
-          { icon: <FaSpellCheck />,name: "Spell and Grammar Check", link: "/" },
+          { icon: <FaSpellCheck />, name: "Spell and Grammar Check", link: "/" },
         ],
       },
       {
@@ -46,10 +47,10 @@ export const links = [
       {
         Head: "Likho Special Overview",
         sublink: [
-       
+
           { icon: <FaClone />, name: "Live Demo", link: "/" },
-        
-          { icon: <FaCommentDollar />,name: "Pricing", link: "/" },
+
+          { icon: <FaCommentDollar />, name: "Pricing", link: "/" },
           { icon: <FaDochub />, name: "Documentation", link: "/" },
         ],
       },
@@ -97,8 +98,8 @@ export const links = [
         Head: "Support Center 7.1",
         sublink: [
           // { name: "Documentation", link: "/" },
-          { icon: <FaHandsHelping />, name: "Help", link: "/" },
-          { icon: <FaBlenderPhone />, name: "Contact Us", link: "/" },
+          { icon: <FaHandsHelping />, name: "Help", link: "/help" },
+          { icon: <FaBlenderPhone />, name: "Contact Us", link: "/contact-us" },
 
         ],
       },
