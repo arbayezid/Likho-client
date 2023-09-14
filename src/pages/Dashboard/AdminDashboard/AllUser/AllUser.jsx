@@ -8,7 +8,7 @@ const AllUser = () => {
     const { data: users } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://localhost:5000/user')
+            const res = await axios.get('https://likho-backend.vercel.app/user')
             return res.data
         }
     })
