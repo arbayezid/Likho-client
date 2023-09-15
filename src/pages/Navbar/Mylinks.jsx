@@ -10,7 +10,8 @@ export const links = [
         sublink: [
           { icon: <FaHockeyPuck />, name: "Products Tour", link: "/" },
           { icon: <FaEdit />, name: "Features", link: "/features" },
-          { icon: <FaPager />, name: "Demo Pages", link: "/" },
+          // { icon: <FaPager />, name: "Demo Pages", link: "/" },
+          { icon: <FaPager />, name: "Demo Pages", link: "/demo" },
           { icon: <FaSimplybuilt />, name: "Online Builder", link: "/" },
           { icon: <FaDochub />, name: "Documentation", link: "/" },
           { icon: <FaCloudDownloadAlt />, name: "Download", link: "/" },

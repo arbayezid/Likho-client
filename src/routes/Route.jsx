@@ -129,13 +129,14 @@ const router = createBrowserRouter([
         element: <Features></Features>
       },
       {
-        path: '/demopage',
+        path: '/demo',
         element: <DemoPage></DemoPage>
       },
       {
-        path: '/demo/:id',
+        path: '/demopage/:id',
         element:<SingleDemo></SingleDemo>,
-        loader: ({params}) => (`http://localhost:5000/demo/${params.id}`)
+          loader: ({params}) =>fetch(`http://localhost:5000/demo/${params.id}`)
+        
       }
     ]
   },
