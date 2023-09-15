@@ -91,10 +91,6 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`https://likho-backend.onrender.com/users/${params.id}`)
       },
       {
-        path: 'template',
-        element: <DashBoardTemplate></DashBoardTemplate>
-      },
-      {
         path: '/editor',
         element: <Editor></Editor>
       },
@@ -171,10 +167,6 @@ const router = createBrowserRouter([
       {
         path: 'document',
         element: <DashDocument></DashDocument>
-      },
-      {
-        path: 'sent',
-        element: <DashBoardSent></DashBoardSent>
       },
       {
         path: 'setting',
