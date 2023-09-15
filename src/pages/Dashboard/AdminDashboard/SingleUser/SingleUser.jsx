@@ -6,11 +6,7 @@ const SingleUser = ({user}) => {
 
     return (
         <tr>
-            <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-            </th>
+            
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
@@ -25,11 +21,10 @@ const SingleUser = ({user}) => {
                 </div>
             </td>
             <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+               {user.name}
             </td>
-            <td>Purple</td>
+            <td> {user.email}</td>
+            <td> {user.role}</td>
             <th>
                 <button className="btn btn-ghost btn-xs">details</button>
             </th>
