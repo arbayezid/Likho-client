@@ -20,7 +20,7 @@ export const links = [
         Head: "Ultra Features",
         sublink: [
           { icon: <FaUserCog />, name: "Collaboration", link: "/" },
-          { icon: <FaFilePdf />, name: "Export to PDF/Word", link: "/" },
+          { icon: <FaFilePdf />, name: "Export to PDF/Word", link: "/exportPdfToWord" },
           { icon: <FaFileWord />, name: "Import from Word", link: "/" },
           { icon: <FaFileExport />, name: "File Management", link: "/" },
           { icon: <FaSpellCheck />,name: "Spell and Grammar Check", link: "/" },

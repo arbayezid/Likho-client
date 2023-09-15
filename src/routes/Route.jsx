@@ -33,6 +33,7 @@ import Features from "../pages/LikhoEditor7.1/Features/Features";
 import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
 import ErrorPage from "../pages/Error/ErrorPage";
+import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 
 
 
@@ -127,6 +128,10 @@ const router = createBrowserRouter([
       {
         path: 'features',
         element: <Features></Features>
+      },
+      {
+        path: "exportPdfToWord",
+        element: <ExportToPdf></ExportToPdf>
       }
     ]
   },
