@@ -9,6 +9,7 @@ const MainLayout = () => {
     const noHeaderFooter = location.pathname.includes('rich')||location.pathname.includes('dashboard') || location.pathname.includes('editor') || location.pathname.includes('updateProfile') || location.pathname.includes('room/:roomID') || location.pathname.includes('doc')
     
     const noFooter = location.pathname.includes('rich')||location.pathname.includes('dashboard')||location.pathname.includes('editor')||location.pathname.includes('updateProfile') || location.pathname.includes('room/:roomID') || location.pathname.includes('doc')
+    ||location.pathname.includes('demopage')
 
     return (
         <div>

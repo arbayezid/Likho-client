@@ -32,6 +32,8 @@ import Navbar from "../pages/Navbar/Navbar";
 import Features from "../pages/LikhoEditor7.1/Features/Features";
 import CreateBlog from "../pages/CreateBlog/CreateBlog";
 import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
+import DemoPage from "../DemoPage/DemoPage";
+import SingleDemo from "../DemoPage/SingleDemo";
 
 
 
@@ -66,7 +68,7 @@ const router = createBrowserRouter([
         element: <UpdateProfile></UpdateProfile>
       },
       {
-        path: '/editor',
+        path: '/customeditor',
         element: <CustomEditor></CustomEditor>
       },
       {
@@ -123,8 +125,17 @@ const router = createBrowserRouter([
         element: <VideoRoompage></VideoRoompage>
       },
       {
-        path: 'features',
+        path: '/features',
         element: <Features></Features>
+      },
+      {
+        path: '/demopage',
+        element: <DemoPage></DemoPage>
+      },
+      {
+        path: '/demo/:id',
+        element:<SingleDemo></SingleDemo>,
+        loader: ({params}) => (`http://localhost:5000/demo/${params.id}`)
       }
     ]
   },

@@ -1,0 +1,65 @@
+[
+    {
+        "f_name": "Voice To Text",
+        "description": "When you start to talk in the editor, your speech will be converted into text and displayed in the editor.",
+        "work_procedure": "To use the voice-to-text feature, follow these steps:\n\n1. Open the editor.\n2. Click on the voice-to-text button.\n3. Start speaking.\n4. Your speech will be transcribed into text and displayed in the editor.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 1
+    },
+    {
+        "f_name": "txt file to word",
+        "description": "You can choose your important txt file here and you can edit, customize this file in this likho editor",
+        "work_procedure": "Here are the steps to use this feature:\n\n1. Open the application.\n2. Navigate to the feature section.\n3. Follow the on-screen instructions to proceed.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 2
+    },
+    {
+        "f_name": "Word to pdf",
+        "description": "You can make your pdf file here. You can customize your document and convert this a a pdf file.",
+        "work_procedure": "The work procedure for Feature 3 is as follows:\n\n1. Access the feature from the main menu.\n2. Configure the settings as needed.\n3. Initiate the process and follow the prompts.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 3
+    },
+    {
+        "f_name": "Docx to pdf",
+        "description": "You can implement your docx file here. When you customize this then you feel the magic of this editor.",
+        "work_procedure": "For Feature 4, follow these instructions:\n\n1. Locate the feature in the app.\n2. Customize the settings to your preference.\n3. Begin the process and follow the guided steps.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 4
+    },
+    {
+        "f_name": "Video Meeting",
+        "description": "Here we implement video calling functionality for your important meeting with teammates.Enjoy the meet.",
+        "work_procedure": "To utilize Feature 5 effectively, adhere to these steps:\n\n1. Access the feature from the main menu.\n2. Configure the settings as per your requirements.\n3. Initiate the process and follow the on-screen instructions.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 5
+    },
+    {
+        "f_name": "Live Chat System",
+        "description": "Here we integrate live chat system, you and your team can chat here used by once room id and name. Enjoy chatting",
+        "work_procedure": "The work procedure for Feature 6 is detailed below:\n\n1. Launch the application.\n2. Navigate to the feature section.\n3. Follow the provided guidelines to complete the task.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 6
+    },
+    {
+        "f_name": "Real Time Collaboration",
+        "description": "All data are up to dateall time for your importance. For the feel of real time collaboration here used socket and mongoose database",
+        "work_procedure": "To use Feature 7 efficiently, adhere to these steps:\n\n1. Find the feature in the app's menu.\n2. Customize the settings as needed.\n3. Start the process and follow the prompts.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 7
+    },
+    {
+        "f_name": "User Friendly Editor",
+        "description": "Likho editor is a most user friendly editor till now. Here you can found your most valuable custamization options.",
+        "work_procedure": "For Feature 8, follow these instructions:\n\n1. Locate the feature within the app.\n2. Configure the settings to your liking.\n3. Begin the process and follow the guided steps.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 8
+    },
+    {
+        "f_name": "Share your Document",
+        "description": "When your work complete here them you can share your document used by email , social media and many ways from here.",
+        "work_procedure": "To effectively utilize Feature 9, follow these steps:\n\n1. Access the feature from the app's main menu.\n2. Customize the settings based on your requirements.\n3. Initiate the process and follow the on-screen instructions.",
+        "img": "https://i.ibb.co/ScFmgdg/demo-feature-rich-7d8a6b80fe-1.webp",
+        "id": 9
+    }
+]

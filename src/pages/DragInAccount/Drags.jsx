@@ -72,7 +72,7 @@ const Drags = () => {
 
                             <div className='lg:w-full shadow-lg'>
                                 <Upload.Dragger
-                                    action='http://localhost:5176'
+                                    action='6'
                                     listType="picture"
                                     accept='.jpg, .jpeg, .doc'
                                     beforeUpload={(file) => {
