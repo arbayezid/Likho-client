@@ -9,22 +9,6 @@ const TemplateSection = () => {
     const threeTemplates = templates.slice(0, 3);
 
 
-
-
-    // const [templates, setTemplates] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('/templates.json')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             // Slice the first 3 entries from the data array
-    //             const slicedtemplates = data.slice(0, 3);
-    //             setTemplates(slicedtemplates);
-    //             slicedtemplates(data)
-
-    //         })
-    // }, [])
-
     return (
         <div className="font-poppins lg:mt-20 space-y-6 lg:mb-16 mt-8 mb-8">
 

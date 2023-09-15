@@ -1,11 +1,26 @@
-import banVid from '../../pages/images/Template/'
+import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import React, { useEffect } from 'react';
 
-const TemplateProduce = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const ResumeEditor = () => {
+  useEffect(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Initializing CKEditor');
+      ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+          console.error(error);
+        });
+    });
+  }, []);
+  
+  
+
+  return (
+    <div>
+      <h1>Your CKEditor</h1>
+      <div id="editor"></div>
+    </div>
+  );
 };
 
-export default TemplateProduce;
+export default ResumeEditor;
