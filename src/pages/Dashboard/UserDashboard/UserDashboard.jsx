@@ -35,6 +35,8 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import MyProfile from '../../Profile/MyProfile';
 import UpdateProfile from '../../Profile/UpdateProfile';
 import DashBoardTemplate from '../DashBoardTemplate/DashBoardTemplate';
+import { Link } from 'react-router-dom';
+import { FaHome, FaPlus, FaThList } from 'react-icons/fa';
 
 
 const drawerWidth = 240;
@@ -120,194 +122,16 @@ export default function UserDashboard() {
     };
 
     return (
-        <>
-            <div>
-                <Account></Account>
-                <Box sx={{ display: 'flex' }}>
-                    <CssBaseline />
-                    <AppBar position="fixed" open={open} elevation={4} sx={{ bgcolor: '#ffffff' }}>
-                        <Toolbar>
-                            <IconButton
-                                color="bg-[#B9B4C7]"
-                                aria-label="open drawer"
-                                onClick={handleDrawerOpen}
-                                edge="start"
-                            // sx={{
-                            //     marginRight: 5,
-                            //     ...(open && { display: 'none' }),
-                            // }}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant="h6" noWrap component="div" sx={{height:60, m:3}}>
-                                <div className='lg:flex'>
-                                    <div>
-                                        <Avatar alt="Cindy Baker" src={user?.photoURL} />
-                                    </div>
-                                    <div className='text-black ml-4'>
-                                        <div>{user?.displayName}</div>
-                                        <div>{user?.email}</div>
-                                    </div>
-                                </div>
-                            </Typography>
-                        </Toolbar>
-                    </AppBar>
-                    <Drawer variant="permanent" open={open}>
-                        <DrawerHeader>
-                            <IconButton onClick={handleDrawerClose}>
-                                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                            </IconButton>
-                        </DrawerHeader>
-                        <Divider />
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('NewDoc')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<PostAddIcon />}
-                                    </ListItemIcon>
-                                    <ListItemText primary='New Document' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('Inbox')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<InboxIcon />}
-                                    </ListItemIcon>
-                                    <ListItemText primary='Inbox' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('sent')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<Send />}
-                                    </ListItemIcon>
-                                    <ListItemText primary='Sent' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('document')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<DocumentScannerIcon />}
-                                    </ListItemIcon>
-                                    <ListItemText primary='Document' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-                        <Divider />
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('setting')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<SettingsOutlinedIcon />}
-                                    </ListItemIcon>
-                                    <ListItemText primary='Setting' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-                        <List>
-                            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => setMenuData('template')}>
-                                <ListItemButton
-                                    sx={{
-                                        minHeight: 48,
-                                        justifyContent: open ? 'initial' : 'center',
-                                        px: 2.5,
-                                    }}
-                                >
-                                    <ListItemIcon
-                                        sx={{
-                                            minWidth: 0,
-                                            mr: open ? 3 : 'auto',
-                                            justifyContent: 'center',
-                                        }}
-                                    >
-                                        {<LuLayoutTemplate />}
-                                    </ListItemIcon>
-                                    <ListItemText primary='template' sx={{ opacity: open ? 1 : 0 }} />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-
-                    </Drawer>
-                    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                        <DrawerHeader />
-
-                        {menuData == 'NewDoc' && <Drags></Drags>}
-                        {menuData == 'document' && <DashDocument></DashDocument>}
-                        {menuData == 'sent' && <DashBoardSent></DashBoardSent>}
-                        {menuData == 'setting' && <UpdateProfile></UpdateProfile> }
-                        {menuData == 'template' && <DashBoardTemplate></DashBoardTemplate> }
-
-
-                    </Box>
-                </Box>
-            </div>
-        </>
+        <div className='text-[#1c3a45] gap-3'>
+            <li><Link to={'/'}><FaHome></FaHome> User Home</Link></li>
+            <li><Link to={'/dashboard/newDoc'}><FaPlus></FaPlus>New Document</Link></li>
+            <li><Link to={'/dashboard/inbox'}><FaThList></FaThList>Inbox</Link></li>
+            <li><Link to={'/dashboard/sent'}><FaThList></FaThList>Sent</Link></li>
+            <li><Link to={'/dashboard/setting'}><FaThList></FaThList>Setting</Link></li>
+            <li><Link to={'/dashboard/template'}><FaThList></FaThList>Template</Link></li>
+            {/* <li><Link to={`/dashboard/payment/${AllClasses._id}`}><FaWallet></FaWallet> Payment</Link></li> */}
+        
+        </div>
     );
-}
+};
 

@@ -84,7 +84,7 @@ function CustomEditor() {
             const formData = new FormData();
             formData.append('document', );
 
-            const response = await axios.post('https://likho-backend.vercel.app/convert/docx2pdf', formData, {
+            const response = await axios.post('https://likho-backend.onrender.com/convert/docx2pdf', formData, {
                 responseType: 'arraybuffer',
             });
 
@@ -99,7 +99,7 @@ function CustomEditor() {
 
     const handleTextToPdfConversion = async () => {
         try {
-            const response = await axios.post('https://likho-backend.vercel.app/convert/text2pdf', { text: editorHtml }, {
+            const response = await axios.post('https://likho-backend.onrender.com/convert/text2pdf', { text: editorHtml }, {
                 responseType: 'arraybuffer',
             });
 
