@@ -8,7 +8,8 @@ const AllUser = () => {
     const { data: users } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://likho-backend.vercel.app/user')
+            const res = await axios.get('https://localhost:5000/user')
+            console.log('res',res)
             return res.data
         }
     })
@@ -30,7 +31,6 @@ const AllUser = () => {
 
                 {
                     users?.map(user=> <SingleUser key={user._id} user={user}></SingleUser> )
-
                 }
                 </tbody>
             </table>
