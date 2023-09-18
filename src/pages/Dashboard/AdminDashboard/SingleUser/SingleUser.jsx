@@ -7,7 +7,7 @@ const SingleUser = ({user}) => {
     return (
         <tr>
             
-            <td>
+            {/* <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
@@ -19,7 +19,7 @@ const SingleUser = ({user}) => {
                         <div className="text-sm opacity-50">United States</div>
                     </div>
                 </div>
-            </td>
+            </td> */}
             <td>
                {user.name}
             </td>

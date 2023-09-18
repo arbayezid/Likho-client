@@ -5,15 +5,15 @@ import SingleUser from '../SingleUser/SingleUser';
 
 const AllUser = () => {
 
-    const { data: users } = useQuery({
+    const { data: users =[] } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://localhost:5000/user')
+            const res = await axios.get('http://localhost:5000/user')
             console.log('res',res)
             return res.data
         }
     })
-    console.log(users)
+    // console.log(users)
 
     return (
         <div className="overflow-x-auto">
