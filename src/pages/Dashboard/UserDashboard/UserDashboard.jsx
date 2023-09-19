@@ -7,7 +7,7 @@ const UserDashboard = () => {
    
     return (
         <div className='text-[#1c3a45] gap-3'>
-            <li><Link to={'/'}><FaHome></FaHome> Student Home</Link></li>
+            <li><Link to={'/'}><FaHome></FaHome> User Home</Link></li>
             <li><Link to={'/dashboard/newDoc'}><FaPlus></FaPlus>New Document</Link></li>
             <li><Link to={'/dashboard/inbox'}><FaThList></FaThList>Inbox</Link></li>
             <li><Link to={'/dashboard/sent'}><FaThList></FaThList>Sent</Link></li>
