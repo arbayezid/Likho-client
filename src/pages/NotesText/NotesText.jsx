@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
 
 const NotesText = () => {
     const [editorContent, setEditorContent] = useState(`
+
+    <div className="p-25">
+    <h1 className="text-center mb-15 text-2xl lg:text-5xl text-blue-950 font-poppins font-semibold">🚀 Join Us at the Likho Editor Guest Meetup! 🖋️ </h1>
     <div className="p-5">
     <h1 className="text-center mb-5 text-2xl lg:text-5xl text-blue-950 font-poppins font-semibold">🚀 Join Us at the Likho Editor Guest Meetup! 🖋️</h1>
   
@@ -34,9 +37,9 @@ const NotesText = () => {
   </div>
 `);
 
-// Register the background color format in Quill
-const BackgroundStyle = Quill.import('formats/background');
-Quill.register(BackgroundStyle, true);
+    // Register the background color format in Quill
+    const BackgroundStyle = Quill.import('formats/background');
+    Quill.register(BackgroundStyle, true);
 
     // In your component's JSX
     useEffect(() => {
@@ -57,20 +60,20 @@ Quill.register(BackgroundStyle, true);
 
     const modules = {
         toolbar: [
-          ['bold', 'italic', 'underline', 'strike'],
-          [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-          ['blockquote', 'code-block'],
-          [{ 'align': [] }],
-          ['link', 'image', 'video'],
-          [{ 'color': [] }, { 'background': [] }],
-          [{ 'font': [] }],
-          [{ 'size': ['small', false, 'large', 'huge'] }],
-          ['mathquill'],
-          [{ 'header': '1' }, { 'header': '2' }],
-          // Add a custom background color button
-          [{ 'background': ['bg-blue-400', 'bg-red-400', 'bg-green-400', 'bg-yellow-400', 'bg-pink-400'] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+            ['blockquote', 'code-block'],
+            [{ 'align': [] }],
+            ['link', 'image', 'video'],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'font': [] }],
+            [{ 'size': ['small', false, 'large', 'huge'] }],
+            ['mathquill'],
+            [{ 'header': '1' }, { 'header': '2' }],
+            // Add a custom background color button
+            [{ 'background': ['bg-blue-400', 'bg-red-400', 'bg-green-400', 'bg-yellow-400', 'bg-pink-400'] }],
         ],
-      };
+    };
     const formats = [
         'header', 'bold', 'italic', 'underline', 'strike', 'list', 'bullet', 'blockquote',
         'code-block', 'align', 'link', 'image', 'video', 'color', 'background', 'font', 'size', 'mathquill'
@@ -112,7 +115,7 @@ Quill.register(BackgroundStyle, true);
                             modules={modules}
                             formats={formats}
                         />
-                      
+
                     </div>
 
 
