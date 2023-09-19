@@ -88,6 +88,7 @@ export default function ExportTabs() {
       <li>Interactive Discussions </li>
       <li>And much more! </li>
       <li>And much more! </li>
+      <li>And much more! </li>
       </ul>
       
     <p className="mb-5">Don't miss out on this opportunity to enhance your writing skills, share your experiences, and be part of a dynamic community. See you there!</p>
