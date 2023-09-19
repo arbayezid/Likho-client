@@ -1,40 +1,5 @@
-
-import * as React from 'react';
-import { useState } from 'react';
-import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MuiDrawer from '@mui/material/Drawer';
-import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import Account from '../../Account/Account'
-import PostAddIcon from '@mui/icons-material/PostAdd';
-import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
-import Drags from '../../DragInAccount/Drags';
-import DashDocument from '../../DashDocument/DashDocument';
-import { Send } from '@mui/icons-material';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import{LuLayoutTemplate} from 'react-icons/Lu'
-import DashBoardSent from '../DashBoardSent/DashBoardSent';
-import { Avatar } from '@mui/material';
-import { useContext } from 'react';
-import { AuthContext } from '../../Providers/AuthProvider';
-import MyProfile from '../../Profile/MyProfile';
-import UpdateProfile from '../../Profile/UpdateProfile';
-import DashBoardTemplate from '../DashBoardTemplate/DashBoardTemplate';
+import React from 'react';
+import { FaHome, FaPlus, FaThList } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { FaHome, FaPlus, FaThList } from 'react-icons/fa';
 
@@ -125,6 +90,7 @@ export default function UserDashboard() {
         <div className='text-[#1c3a45] gap-3'>
             <li><Link to={'/'}><FaHome></FaHome> User Home</Link></li>
             <li><Link to={'/dashboard/newDoc'}><FaPlus></FaPlus>New Document</Link></li>
+            <li><Link to={'/dashboard/Doc'}><FaPlus></FaPlus> Collaborator</Link></li>
             <li><Link to={'/dashboard/inbox'}><FaThList></FaThList>Inbox</Link></li>
             <li><Link to={'/dashboard/sent'}><FaThList></FaThList>Sent</Link></li>
             <li><Link to={'/dashboard/setting'}><FaThList></FaThList>Setting</Link></li>

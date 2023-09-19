@@ -6,13 +6,9 @@ const SingleUser = ({user}) => {
 
     return (
         <tr>
-            <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-            </th>
-            <td>
-                <div className="flex items-center space-x-3">
+            
+            {/* <td>
+                <div className="flex items-center o space-x-3">
                     <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
                             <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
@@ -23,13 +19,12 @@ const SingleUser = ({user}) => {
                         <div className="text-sm opacity-50">United States</div>
                     </div>
                 </div>
-            </td>
+            </td> */}
             <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+               {user.name}
             </td>
-            <td>Purple</td>
+            <td> {user.email}</td>
+            <td> {user.role}</td>
             <th>
                 <button className="btn btn-ghost btn-xs">details</button>
             </th>

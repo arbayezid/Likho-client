@@ -6,8 +6,8 @@ const VideoRoompage = () => {
 
     const myMeeting = async (element) => {
         console.log("element",element)
-        const appID = 315105672;
-        const serverSecret = "69a685f6fd059679530430cf342bad80";
+        const appID = 1840904011;
+        const serverSecret = "fd52496b34da382d34dfe2c55f6e8673";
         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, Date.now().toString(),"Bayezid")
 
         const zc = ZegoUIKitPrebuilt.create(kitToken);

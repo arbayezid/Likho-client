@@ -20,14 +20,14 @@ const DashBoardTemplate = () => {
                 </div>
                 <h6>Get Started:</h6>
 
-                <Link to="drags">
+                <Link to="/dashboard/newDoc">
                 <div className='bg-slate-100 border mb-4 '>
                     <button className="flex items-center p-4 text-xl">
                         <HiOutlineDocumentAdd className='w-10 h-10 mr-4' />  Import a document <span className="ml-2"><BsArrowRight className='w-10 h-10 ml-80' /></span>
                     </button>
                 </div></Link>
 
-               <Link to="drags">
+               <Link to="/dashboard/newDoc">
 
                <div className='bg-slate-100 border mb-4'>
                     <button className="flex items-center p-4 text-xl">
@@ -36,7 +36,7 @@ const DashBoardTemplate = () => {
                 </div>
                 </Link>
 
-                <Link to="drags">
+                <Link to="/dashboard/newDoc">
                 <div className='bg-slate-100 border mb-8 '>
                     <button className="flex items-center p-4 text-xl">
                         <BsPencil className='w-10 h-10 mr-4' />  Import a document <span className="ml-2"><BsArrowRight className='w-10 h-10 ml-80' /></span>
