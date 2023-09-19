@@ -16,7 +16,7 @@ const TemplateSection = () => {
             <p className="text-gray-700 text-center">Customizable templates ensure consistent document structures. Define full or <br />partial templates to apply and maintain.</p>
 
             <Container>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2   lg:grid-cols-3 gap-4">
                     {threeTemplates.map((template) => (
                         <Templates key={template._id} template={template} />
                     ))}
