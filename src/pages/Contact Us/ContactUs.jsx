@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaMailBulk, FaPhoneAlt } from "react-icons/fa";
-import { HiLocationMarker, HiOutlineMail } from "react-icons/hi";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import Swal from 'sweetalert2';
 
 
@@ -28,8 +28,8 @@ const ContactUs = () => {
             <div className='text-center space-y-2'>
                 <h2 className='text-5xl font-bold mb-5'>GET IN TOUCH</h2>
                 <p className='flex justify-center items-center gap-1 font-semibold'> <FaPhoneAlt className='text-xs'></FaPhoneAlt> Phone: <span className='text-purple-500 font-medium'>+8801980005000</span></p>
-                <p className='flex justify-center items-center gap-1 font-semibold'> <HiOutlineMail></HiOutlineMail> Email: <span className='text-purple-500 font-medium'>likhodoc@gmail.com</span></p>
-                <p className='flex justify-center items-center gap-1 font-semibold'> <HiLocationMarker></HiLocationMarker> Address: <span className='text-purple-500 font-medium'> Mirpur-1, Dhaka, Bangladesh</span></p>
+                <p className='flex justify-center items-center gap-1 font-semibold'> <FaEnvelope></FaEnvelope> Email: <span className='text-purple-500 font-medium'>likhodoc@gmail.com</span></p>
+                <p className='flex justify-center items-center gap-1 font-semibold'> <FaMapMarkerAlt></FaMapMarkerAlt> Address: <span className='text-purple-500 font-medium'> Mirpur-1, Dhaka, Bangladesh</span></p>
                 <div className='flex justify-center gap-5 text-2xl'>
                     <FaFacebook></FaFacebook>
                     <FaInstagram></FaInstagram>
