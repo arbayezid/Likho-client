@@ -6,7 +6,7 @@ const useTemplates = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/templates')
+        fetch('https://likho-backend.onrender.com/templates')
             .then(res => res.json())
             .then(data => {
                 setTemplates(data);

@@ -71,7 +71,7 @@ function CustomEditor() {
             formData.append('document', file);
     
             try {
-              const response = await axios.post('http://localhost:5000/convert/docx2html', formData);
+              const response = await axios.post('https://likho-backend.vercel.app/convert/docx2html', formData);
               const docxHtmlContent = response.data;
     
               // Display the HTML content with images in the editor
@@ -117,7 +117,7 @@ function CustomEditor() {
             const formData = new FormData();
             formData.append('document', selectedFile);
 
-            const response = await axios.post('http://localhost:5000/convert/docx2pdf', formData, {
+            const response = await axios.post('https://likho-backend.vercel.app/convert/docx2pdf', formData, {
                 responseType: 'arraybuffer',
             });
 

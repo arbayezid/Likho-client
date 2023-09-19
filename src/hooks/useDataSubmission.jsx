@@ -9,7 +9,7 @@ const useDataSubmission = () => {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:5000/templates', {
+            const response = await fetch('https://likho-backend.vercel.app/templates', {
                 method: 'POST', // Use POST method for creating new data
                 headers: {
                     'Content-Type': 'application/json', // Set the content type to JSON

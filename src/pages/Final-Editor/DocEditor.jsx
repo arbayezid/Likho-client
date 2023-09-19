@@ -8,7 +8,7 @@ import styled from '@emotion/styled';
 
 import { io } from 'socket.io-client';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+
 
 const Component = styled.div`
     background: #f5f5f5
@@ -39,7 +39,7 @@ const DocEditor = () => {
     const [quill, setQuill] = useState()
 
     const [socket, setSocket] = useState()
-    const [selectedFile, setSelectedFile] = useState(null);
+
 
 
     const { id } = useParams()
@@ -56,7 +56,12 @@ const DocEditor = () => {
     }, [])
 
     useEffect(() => {
-        const socketServer = io('https://likho-doc.up.railway.app/')
+        const socketServer = io('https://likho-backend.onrender.com', {
+            withCredentials:true,
+            extraHeaders: {
+                "my-custom-header":"abcd"
+            }
+        })
 
         setSocket(socketServer)
 
@@ -128,27 +133,10 @@ const DocEditor = () => {
 
     }, [quill, socket])
 
-    const handleDocxToPdfConversion = async () => {
-        try {
-            const formData = new FormData();
-            formData.append('document', selectedFile);
-
-            const response = await axios.post('https://likho-backend.vercel.app/convert/docx2pdf', formData, {
-                responseType: 'arraybuffer',
-            });
-
-            const pdfBlob = new Blob([response.data], { type: 'application/pdf' });
-            const pdfUrl = URL.createObjectURL(pdfBlob);
-
-            window.open(pdfUrl);
-        } catch (error) {
-            console.error('Error converting document to PDF:', error);
-        }
-    };
+    
 
     return (
         <div>
-            <button className='px-2'  onClick={handleDocxToPdfConversion}> Docx to PDF</button>
             <Component>
                 <Box className='container' id='container'>
 

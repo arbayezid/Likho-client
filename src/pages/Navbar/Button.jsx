@@ -8,7 +8,7 @@ const Button = () => {
 
   const [dbUser, setDbUser] = useState({});
   useEffect(() => {
-    fetch(`https://likho-backend.vercel.app/users/${user?.email}`)
+    fetch(`https://likho-backend.onrender.com/users/${user?.email}`)
       .then(res => res.json())
       .then(data => setDbUser(data)
 
@@ -54,7 +54,7 @@ const Button = () => {
                   Profile
                 </Link>
                 <Link
-                  to="/dashboard"
+                  to="/dashboard/newDoc"
                   className="font-normal hover:font-semibold"
                 >
                   Dashboard
