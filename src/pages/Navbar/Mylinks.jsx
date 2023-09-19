@@ -1,4 +1,4 @@
-import { FaBlenderPhone, FaBook, FaCalendarMinus, FaClone, FaCloudDownloadAlt, FaCommentDollar, FaDochub, FaEdit, FaFacebook, FaFileExport, FaFilePdf, FaFileWord, FaHandsHelping, FaHockeyPuck, FaPager, FaPenSquare, FaReadme, FaSimplybuilt, FaSpellCheck, FaStreetView, FaSuitcaseRolling, FaTwitter, FaUserCog } from "react-icons/fa"
+import { FaBlenderPhone, FaCalendarMinus, FaClone, FaCloudDownloadAlt, FaCommentDollar, FaDochub, FaEdit, FaBook, FaFileExport, FaFilePdf, FaFileWord, FaHandsHelping, FaHockeyPuck, FaPager, FaPenSquare, FaReadme, FaSimplybuilt, FaSpellCheck, FaStreetView, FaSuitcaseRolling, FaTwitter, FaUserCog } from "react-icons/fa"
 
 export const links = [
   {
