@@ -39,6 +39,9 @@ import Stats from "../pages/Dashboard/AdminDashBoard/Stats/Stats";
 import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
+import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
+import ImportFromWord from "../pages/LikhoEditor7.1/Features/ImportFromWord/ImportFromWord";
+// import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 
 
 
@@ -134,20 +137,12 @@ const router = createBrowserRouter([
         element: <Features></Features>
       },
       {
-        path: "/contact-us",
-        element: <ContactUs></ContactUs>
+        path: "exportPdfToWord",
+        element: <ExportToPdf></ExportToPdf>
       },
       {
-        path: "/help",
-        element: <Help></Help>
-      },
-      {
-        path: 'templatesdemo',
-        element: <TemplatesDemo></TemplatesDemo>
-      },
-      {
-        path: 'templatesdetails/:id',
-        element: <TemplatesDetails></TemplatesDetails>
+        path : "importFromWord",
+        element : <ImportFromWord></ImportFromWord>
       }
     ]
   },

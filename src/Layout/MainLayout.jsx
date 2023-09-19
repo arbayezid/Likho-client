@@ -12,9 +12,10 @@ const MainLayout = () => {
 
     return (
         <div>
-           { noHeaderFooter || <Navbar></Navbar>}
+            {/* <Navbar></Navbar> */}
+            <Navbar></Navbar>
             <Outlet></Outlet>
-            {noFooter || <Footer></Footer>}
+            {/* {noFooter || <Footer></Footer>} */}
         </div>
     );
 };

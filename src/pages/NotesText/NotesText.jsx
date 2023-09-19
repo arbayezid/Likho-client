@@ -12,22 +12,23 @@ const NotesText = () => {
 
     <div className="p-25">
     <h1 className="text-center mb-15 text-2xl lg:text-5xl text-blue-950 font-poppins font-semibold">🚀 Join Us at the Likho Editor Guest Meetup! 🖋️ </h1>
+    <div className="p-5">
+    <h1 className="text-center mb-5 text-2xl lg:text-5xl text-blue-950 font-poppins font-semibold">🚀 Join Us at the Likho Editor Guest Meetup! 🖋️</h1>
   
-    <p className="text-center text-gray-700 mb-5">📅 Date: [24 - Nov -2023] 🕒 Time: [06:00 PM (BD)] 📍 Location: [Westin, Gulshan, Dhaka]</p>
+    <p className="text-center text-gray-700 mb-5">📅 Date: [24 - Nov -2023] 🕒 Time: [06:00 PM (BD)]</p>
     
-    <p className="mb-5">Calling all wordsmiths and storytellers! 📝✨</p>
-    <p className="mb-5">Ready to dive into the world of words and creativity? The Likho Editor Guest Meetup is the place to be. Connect with fellow writers, editors, and content creators. 🤝</p>
+    <p className="mb-5">Ready to dive into the world of words and creativity? The Likho Editor Guest Meetup is the place to be. Connect with fellow writers, editors, and content creators.</p>
     
     <ul className="mb-5">
 
-    <p style=" margin: 10px 10px 5px; color: gray; font-size: 2rem;">📌 Highlights:</p>
+    <p style=" margin: 10px 10px 5px; color: gray; font-size: 2rem;"> Highlights:</p>
 
       <p className="text-2xl font-semibold" ></P>
-      <li>Engaging Workshops 📚</li>
-      <li>Interactive Discussions 🗣️</li>
-      <li>Networking Opportunities 🤝</li>
-      <li>Inspiring Speakers 🎙️</li>
-      <li>And much more! 🌟</li>
+      <li>Engaging Workshops </li>
+      <li>Interactive Discussions </li>
+      <li>Networking Opportunities </li>
+      <li>Inspiring Speakers </li>
+      <li>And much more! </li>
     </ul>
   
     <p className="mb-5">Don't miss out on this opportunity to enhance your writing skills, share your experiences, and be part of a dynamic community. See you there! 👥🚀</p>
@@ -107,7 +108,7 @@ const NotesText = () => {
             <Container>
                 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center pb-14">
                     {/* React Quill editor */}
-                    <div className="p-4 ">
+                    <div className="p-4">
                         <ReactQuill
                             value={editorContent}
                             onChange={handleEditorChange}
@@ -125,7 +126,7 @@ const NotesText = () => {
                                 Multipurpose
                             </div>
                             <div className="collapse-content">
-                                <p>Likho Editor 7.1, the adaptable WYSIWYG HTML editor, suits a broad spectrum of applications. Whether it's creating comprehensive Word-like documents or streamlining toolbars for emails and instant messaging, it's got you covered.</p>
+                                <p>Likho Editor 7.1, the adaptable WYSIWYG HTML editor, suits a broad spectrum of applications. Whether  creating comprehensive Word-like documents or streamlining toolbars for emails and instant messaging, got you covered.</p>
                             </div>
                         </div>
                         <div className="collapse collapse-plus">
@@ -143,7 +144,7 @@ const NotesText = () => {
                                 Features
                             </div>
                             <div className="collapse-content">
-                                <p>Effortlessly edit documents with our feature-rich editor. Enjoy a seamless experience with tools for text formatting, real-time collaboration, version history tracking, and more. Whether it's creating reports, letters, or any text-based content, our editor simplifies the process and enhances productivity.</p>
+                                <p>Effortlessly edit documents with our feature-rich editor. Enjoy a seamless experience with tools for text formatting, real-time collaboration, version history tracking, and more. Whether creating reports, letters, or any text-based content, our editor simplifies the process and enhances productivity.</p>
                             </div>
                         </div>
                         <div className="collapse collapse-plus">
@@ -152,7 +153,7 @@ const NotesText = () => {
                                 How It Helps Users.
                             </div>
                             <div className="collapse-content">
-                                <p>Our document editing tools are designed with you in mind. Streamline your work, collaborate efficiently, and stay organized with features that help you create, edit, and manage documents effortlessly. Whether you're a student, professional, or anyone who works with documents, our user-friendly tools are here to make your tasks simpler and more productive.</p>
+                                <p>Our document editing tools are designed with you in mind. Streamline your work, collaborate efficiently, and stay organized with features that help you create, edit, and manage documents effortlessly. Whether  a student, professional, or anyone who works with documents, our user-friendly tools are here to make your tasks simpler and more productive.</p>
                             </div>
                         </div>
                     </div>

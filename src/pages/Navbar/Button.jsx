@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle } from 'react-icons/fa';
 
 const Button = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const [dbUser, setDbUser] = useState({});
   useEffect(() => {
-    fetch(`https://likho-backend.onrender.com/users/${user?.email}`)
+    fetch(`https://likho-backend.vercel.app/users/${user?.email}`)
       .then(res => res.json())
       .then(data => setDbUser(data)
 
@@ -20,6 +20,7 @@ const Button = () => {
       .then()
       .catch((error) => console.log(error));
   };
+
   return (
     <div>
       
@@ -54,29 +55,31 @@ const Button = () => {
                   Profile
                 </Link>
                 <Link
-                  to="/dashboard/newDoc"
+                  to="/dashboard"
                   className="font-normal hover:font-semibold"
                 >
                   Dashboard
                 </Link>
 
+                    
+                    
+                    <Link
+                      onClick={handleLogOut}
+                      className="font-normal hover:font-semibold"
+                    >
+                      Logout
+                    </Link>
+                  </ul>
 
-
-                <Link
-                  onClick={handleLogOut}
-                  className="font-normal hover:font-semibold"
-                >
-                  Logout
-                </Link>
-              </ul>
-            </div>
-          </>
-        ) : (
-          <Link to='/signup'><button className="text-lg font-poppins px-4 bg-purple-700 hover:bg-purple-500 text-center text-white p-2 rounded-lg">Get Started</button></Link>
-        )
-      }
-    </div>
-
+                </div>
+              </>
+            ) : (
+              <Link to="/signup" className="font-normal">
+                SignUp
+              </Link>
+            )}
+            {/* if user not login, then show Login btn */}
+          </div>
   );
 };
 
