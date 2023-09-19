@@ -5,14 +5,15 @@ import SingleUser from '../SingleUser/SingleUser';
 
 const AllUser = () => {
 
-    const { data: users } = useQuery({
+    const { data: users =[] } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://likho-backend.vercel.app/user')
+            const res = await axios.get('http://localhost:5000/user')
+            console.log('res',res)
             return res.data
         }
     })
-    console.log(users)
+    // console.log(users)
 
     return (
         <div className="overflow-x-auto">
@@ -30,7 +31,6 @@ const AllUser = () => {
 
                 {
                     users?.map(user=> <SingleUser key={user._id} user={user}></SingleUser> )
-
                 }
                 </tbody>
             </table>
