@@ -6,7 +6,7 @@ import animationData from '../../../public/chat.json';
 import Lottie from 'react-lottie';
 
 
-const socket = io.connect("https://likho-doc.up.railway.app");
+const socket = io.connect("http://localhost:5000");
 
 const ChatContainer = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
