@@ -40,6 +40,7 @@ import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
 import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
+import ImportFromWord from "../pages/LikhoEditor7.1/Features/ImportFromWord/ImportFromWord";
 // import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 
 
@@ -138,6 +139,10 @@ const router = createBrowserRouter([
       {
         path: "exportPdfToWord",
         element: <ExportToPdf></ExportToPdf>
+      },
+      {
+        path : "importFromWord",
+        element : <ImportFromWord></ImportFromWord>
       }
     ]
   },

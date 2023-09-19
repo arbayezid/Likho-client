@@ -9,11 +9,11 @@ const ExportToWordSection = () => {
                     <ol className='py-6 '>
                         <li className='pb-4 text-xl'>1.Set the document’s header and footer.</li>
                         <li className='pb-4 text-xl'>2.Insert page breaks, embed images and use any font you like.</li>
-                        <li className='text-xl'>3.Ready-to-use with CKEditor 5 and CKEditor 4 as a premium plugin.</li>
+                        <li className='text-xl'>3.Ready-to-use with LIKHO as a premium plugin.</li>
                     </ol>
                 </div>
                 <div>
-                    <img className='h-[518px] w-[691px]' src="
+                    <img className='h-[320px] w-[400px]' src="
 https://i.ibb.co/3f6g1NS/global-export-to-pdf-f37377f20a.webp" alt="" />
                 </div>
             </div>

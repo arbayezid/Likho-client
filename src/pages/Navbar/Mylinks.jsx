@@ -22,7 +22,7 @@ export const links = [
           { icon: <FaUserCog />, name: "Real-Time Collaboration", link: "/" },
           { icon: <FaBook />, name: "Templates", link: "/templatesdemo" },
           { icon: <FaFilePdf />, name: "Export to PDF/Word", link: "/exportPdfToWord" },
-          { icon: <FaFileWord />, name: "Import from Word", link: "/" },
+          { icon: <FaFileWord />, name: "Import from Word", link: "/importFromWord" },
           { icon: <FaFileExport />, name: "File Management", link: "/" },
           { icon: <FaSpellCheck />, name: "Spell and Grammar Check", link: "/" },
         ],

@@ -3,9 +3,9 @@ import React from 'react';
 const ExportToPdfSection = () => {
     return (
         <div className='py-12'>
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-around  items-center'>
                 <div>
-                    <img className='h-[518px] w-[691px]' src="https://i.ibb.co/ypFgh8p/global-export-to-word-411f9d6337.webp" alt="" />
+                    <img className='h-[320px] w-[400px]' src="https://i.ibb.co/ypFgh8p/global-export-to-word-411f9d6337.webp" alt="" />
                 </div>
                 <div>
                     <h1 className='text-3xl text-black font-bold'>Export to Word</h1>
