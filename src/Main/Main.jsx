@@ -10,6 +10,9 @@ import NotesText from "../pages/NotesText/NotesText";
 import ReadSection from "../pages/ReadSection/ReadSection";
 import ChatContainer from "../pages/RealTimeChatInfo/ChatContainer";
 import TemplateSection from "../pages/Template/TemplateSection";
+import TabsTemplates from "../pages/TemplatesDemo/TabsTemplates";
+
+
 
 
 
@@ -23,8 +26,7 @@ const Main = () => {
         <div>
             <Banner></Banner>
             <NotesText></NotesText>
-
-            {/* <ResumeEditor></ResumeEditor> */}
+            {/* <TabsTemplates /> */}
 
             <TemplateSection></TemplateSection>
             <CreativeWorkShop></CreativeWorkShop>
