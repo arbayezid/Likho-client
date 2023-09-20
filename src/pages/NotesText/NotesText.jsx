@@ -57,6 +57,7 @@ const NotesText = () => {
 
 
 
+
     const modules = {
         toolbar: [
             ['bold', 'italic', 'underline', 'strike'],
@@ -105,16 +106,16 @@ const NotesText = () => {
             </div>
 
             <Container>
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center pb-14">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center pb-14">
                     {/* React Quill editor */}
-                    <div className="p-4 ">
+                    <div className="p-4">
                         <ReactQuill
                             value={editorContent}
                             onChange={handleEditorChange}
                             modules={modules}
                             formats={formats}
+                            
                         />
-
                     </div>
 
 
@@ -149,7 +150,7 @@ const NotesText = () => {
                         <div className="collapse collapse-plus">
                             <input type="radio" name="my-accordion-3" />
                             <div className="collapse-title text-3xl text-blue-950 font-medium">
-                                How It Helps Users.
+                                How It Helps Users
                             </div>
                             <div className="collapse-content">
                                 <p>Our document editing tools are designed with you in mind. Streamline your work, collaborate efficiently, and stay organized with features that help you create, edit, and manage documents effortlessly. Whether you're a student, professional, or anyone who works with documents, our user-friendly tools are here to make your tasks simpler and more productive.</p>
