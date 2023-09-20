@@ -18,7 +18,7 @@ const Stats = () => {
 
     return (
         <div>
-            <h1>Hello, here will be all doc user</h1>
+            <h1>Hello here will be all doc user</h1>
         </div>
     );
 };
