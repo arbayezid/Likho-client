@@ -4,17 +4,14 @@ import { useLoaderData, useParams } from 'react-router-dom';
 const SingleDemo = () => {
     const seeDemo = useLoaderData();
     const { id } = useParams();
-    // const {id} = useParams();
-    // console.log(id);
-    // const { f_name, work_procedure, img, description } = seeDemo;
-    // console.log(seeDemo);
+    
     const [demoPage, setDemoPage] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/demo/${seeDemo?._id}`)
             .then(res => res.json())
             .then(data => setDemoPage(data))
-    }, []);
+    }, [seeDemo?._id]);
      console.log(demoPage);
     return (
         <div className='text-center'>
