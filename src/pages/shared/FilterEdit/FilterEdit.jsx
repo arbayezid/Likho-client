@@ -56,9 +56,9 @@ const FilterEdit = ({ templateInfo }) => {
   };
 
   return (
-    <div style={{ marginTop: '2.75rem' }} className='bg-white font-poppins'>
+    <div style={{  }} className='bg-white font-poppins'>
       <ReactQuill className='bg-white font-poppins'
-        style={{ marginTop: '2.75rem', padding: '20px 0 10px 0', margin: '0 10px 0 0' }}
+        style={{ padding: '20px 0 10px 0', margin: '0 10px 0 0' }}
         value={content}
         onChange={handleContentChange}
       />

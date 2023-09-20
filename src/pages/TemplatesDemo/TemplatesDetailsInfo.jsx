@@ -46,22 +46,24 @@ const TemplatesDetailsInfo = ({ templateInfo }) => {
 
             {/* banner finished */}
 
-            <p className="text-blue-600 flex items-center gap-3 px-16 mt-5 text-base font-poppins">View Info <FaChevronDown /></p>
+            <p className="text-blue-600 flex items-center gap-3 px-16 mt-5 m-5 text-base font-poppins">View Info <FaChevronDown /></p>
 
 
             {/* React Tabs Use  */}
 
 
             <div className="justify-center flex items-center">
-                <Tabs className="w-1/2">
+                <Tabs className="w-full sm:w-1/2">
                     <div className="justify-center text-center items-center"> {/* Center the text */}
-                        <TabList className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-8 border-b-2 w-full border-gray-500">
-                            <Tab className="border-b-4 p-2 text-center border-lime-300 border-transparent hover:border-lime-300">
+                        <TabList className="flex flex-wrap justify-center  sm:justify-evenly font-poppins font-semibold text-xl text-blue-950  gap-4 sm:gap-20   w-full ">
+                            <Tab className="border-b-4 border-b-lime-300 border px-10 p-2 text-blue-950 text-center bg-gray-100 rounded   hover:border-lime-300">
+
                                 Template Update
 
 
                             </Tab>
-                            <Tab className="border-b-4 p-2 border-lime-300 border-transparent hover:border-lime-300">
+                            <Tab className="border-b-4 border-b-lime-300 border px-10 p-2 text-blue-950 text-center bg-gray-100 rounded   hover:border-lime-300">
+
                                 Real-Time Collaboration
                             </Tab>
                             {/* Add more tabs here if needed */}
@@ -71,17 +73,16 @@ const TemplatesDetailsInfo = ({ templateInfo }) => {
 
                     {/* sub */}
 
-                    <p className="border-b-4"></p>
+                    <p className="border-b-2"></p>
                     <TabPanel>
 
 
-                      <TabsTemplates/>
+                        <TabsTemplates />
 
                         {/* Add any other content or components related to this tab */}
                     </TabPanel>
                     <TabPanel>
-                        <h2>Real-Time Collaboration</h2>
-                        <p>Learn how to collaborate in real time.</p>
+                        <TabsTemplates />
                         {/* Add any other content or components related to this tab */}
                     </TabPanel>
                 </Tabs>
@@ -100,7 +101,7 @@ const TemplatesDetailsInfo = ({ templateInfo }) => {
 
             <Container>
 
-                <div className="grid grid-cols-2 justify-center items-center pt-8 lg:px-44">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 items-center pt-8 lg:px-44">
 
                     <img className="w-3/4 h-3/4" src={image} alt="" />
 
@@ -115,13 +116,7 @@ const TemplatesDetailsInfo = ({ templateInfo }) => {
 
                 <p className="border-b-2"></p>
 
-
-
-
-                <div className="grid grid-cols-2 justify-center gap-8 items-center pt-8 lg:px-44">
-
-
-
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 items-center pt-8 lg:px-44">
                     <div className=" space-y-12">
                         <h2 className="text-blue-950 text-4xl font-semibold">Can you provide more details about how to create a template and collaborate on it?</h2>
                         <p className="text-gray-800">{sub_description}</p>
