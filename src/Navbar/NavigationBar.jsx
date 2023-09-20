@@ -85,7 +85,7 @@ console.log(dbUser);
             </div>
 
             <Link to={"/"} className="text-3xl">
-              <span className="bg-blue-400 p-1  rounded">L</span>ikho
+              <span className="bg-white-400 p-1  rounded">L</span>ikho
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex ">

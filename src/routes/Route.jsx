@@ -41,6 +41,9 @@ import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
 import DemoPage from "../DemoPage/DemoPage";
 import SingleDemo from "../DemoPage/SingleDemo";
+import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
+import ImportFromWord from "../pages/LikhoEditor7.1/Features/ImportFromWord/ImportFromWord";
+// import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 
 
 
@@ -146,8 +149,8 @@ const router = createBrowserRouter([
         
       },
       {
-        path: "/contact-us",
-        element: <ContactUs></ContactUs>
+        path: "exportPdfToWord",
+        element: <ExportToPdf></ExportToPdf>
       },
       {
         path: "/help",

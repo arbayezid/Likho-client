@@ -18,6 +18,8 @@ const MainLayout = () => {
     return (
         <div>
             {noHeaderFooter || <Navbar></Navbar>}
+            
+            <Navbar></Navbar>
             <Outlet></Outlet>
             {noFooter || <Footer></Footer>}
         </div>
