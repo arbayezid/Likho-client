@@ -21,7 +21,7 @@ const SingleUser = ({ user }) => {
 
     return (
         <tr>
-            <ToastContainer></ToastContainer>
+            
             {/* <td>
                 <div className="flex items-center o space-x-3">
                     <div className="avatar">
@@ -36,12 +36,13 @@ const SingleUser = ({ user }) => {
                 </div>
             </td> */}
             <td>
+                <ToastContainer></ToastContainer>
                 {user.name}
             </td>
             <td> {user.email}</td>
             <td> {user.role}</td>
             <th>
-                <button onClick={() => handleDelete(user._id)} className="btn btn-ghost btn-xs">Delete</button>
+                <button onClick={() => handleDelete(user._id)} className="btn btn-neutral ">Delete</button>
             </th>
         </tr>
     );
