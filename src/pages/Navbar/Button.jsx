@@ -8,7 +8,7 @@ const Button = () => {
 
   const [dbUser, setDbUser] = useState({});
   useEffect(() => {
-    fetch(`https://likho-backend.onrender.com/users/${user?.email}`)
+    fetch(`http://localhost:5000/users/${user?.email}`)
       .then(res => res.json())
       .then(data => setDbUser(data)
 

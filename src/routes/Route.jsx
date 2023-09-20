@@ -88,7 +88,7 @@ const router = createBrowserRouter([
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({ params }) => fetch(`https://likho-backend.onrender.com/users/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
       },
       {
         path: 'template',
@@ -102,7 +102,7 @@ const router = createBrowserRouter([
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
         loader: ({ params }) =>
-          fetch(`https://likho-backend.onrender.com/users/${params.id}`)
+          fetch(`http://localhost:5000/users/${params.id}`)
       },
       {
         path: "/chat",

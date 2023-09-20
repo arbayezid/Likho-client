@@ -56,7 +56,7 @@ const DocEditor = () => {
     }, [])
 
     useEffect(() => {
-        const socketServer = io('https://likho-backend.onrender.com', {
+        const socketServer = io('http://localhost:5000', {
             withCredentials:true,
             extraHeaders: {
                 "my-custom-header":"abcd"
