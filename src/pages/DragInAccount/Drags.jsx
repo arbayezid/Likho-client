@@ -26,15 +26,12 @@ import { Link } from 'react-router-dom';
 const Drags = () => {
     return (
         <div>
-            <div className='lg:ml:20'>
+            <div className='lg:ml:'>
 
-                <h1 className='text-3xl'>Create New Document</h1>
+                <h1 className='text-3xl ml-3 font-bold'>Create New Document</h1>
                 <hr className='my-5'/>
-                <div>
-                    <input type="text" name="" id="" />
-                </div>
                 <div className='grid lg:grid-cols-2  gap-0'>
-                    <div className='w-3/5  justify-center items-center'>
+                    <div className='w-3/5 m-auto  justify-center items-center'>
                         <div className='border rounded-md mt-8'>
                             <div className='border p-2 px-2 py-4  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                 <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'><FaDochub ></FaDochub> <p>your Document</p></Link>
@@ -57,7 +54,7 @@ const Drags = () => {
 
                         </div>
                     </div>
-                    <div className=' w-full bg-white shadow-md p-3 mt-6 rounded-md'>
+                    <div className=' w-4/5 m-auto bg-white shadow-md p-3 mt-6 rounded-md'>
                         <h1 className='text-center font-bold text-3xl text-gray-600  mb-12'>Upload here your file to edit</h1>
                         <div
                             style={{
@@ -111,9 +108,9 @@ const Drags = () => {
                                     <Button icon={<UploadOutlined />}>Click to Upload</Button>
                                 </Upload.Dragger>
                             </div>
-                            <div className='lg:mt-10 py-2 px-8'>
+                            <div className='lg:mt-10 py-6 px-4'>
                                 <button className=''>
-                                    <Link to={'/editor'} className='text-3xl font-bold text-slate-500 btn bg-[#f1f4f4]'>Create a new document</Link>
+                                    <Link to={'/editor'} className='text-2xl font-bold text-slate-500 btn bg-[#f1f4f4]'>Create a new document</Link>
                                 </button>
                             </div>
                         </div>

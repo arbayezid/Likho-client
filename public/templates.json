@@ -4,20 +4,82 @@
         "title": "Professionally Designed Project Management Templates",
         "short_description": "Take control of your projects with Likho Templates' Project Management Templates. Streamline project planning, tracking, and execution.",
         "image": "https://i.ibb.co/1dcpG8R/k4.png",
-        "description": "Empower your project management endeavors with Likho Templates' Project Management Templates. Our extensive collection features professionally designed templates to streamline every aspect of your projects. Whether you're dealing with complex timelines, task lists, or resource allocation, our templates have you covered. From Gantt charts that visualize project timelines to task lists that keep you organized, Likho Templates simplifies project management. Achieve your project goals efficiently and effectively. Access these templates to stay on top of deadlines, allocate resources wisely, and collaborate seamlessly with your team. Experience project management excellence with Likho Templates."
+        "img_1": "https://i.ibb.co/wYnjCG1/image.png",
+        "img_2": "https://i.ibb.co/Cnhxyvq/139.png",
+        "description": "Empower your project management endeavors with Likho Templates' Project Management Templates. Our extensive collection features professionally designed templates to streamline every aspect of your projects. Whether you're dealing with complex timelines, task lists, or resource allocation, our templates have you covered. From Gantt charts that visualize project timelines to task lists that keep you organized, Likho Templates simplifies project management. Achieve your project goals efficiently and effectively. Access these templates to stay on top of deadlines, allocate resources wisely, and collaborate seamlessly with your team. Experience project management excellence with Likho Templates.",
+        "sub_description": "Enhance your project management capabilities with professionally designed templates. Visualize timelines and allocate resources efficiently.",
+        "company": "Your Company Name",
+        "street": "123 Main Street",
+        "city": "Your City",
+        "number": "1234567890",
+        "pro_name": "Project Name",
+        "date": "2023-09-20",
+        "overview": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper...",
+        "goals_1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+        "goals_2": "Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        "specifications": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.",
+        "milestones": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..",
+        "resources": "Hardware and software required for project development. This includes computer workstations, servers, development tools, and databases...",
+        "glossary_of_terms": "A set of activities and processes that ensure that the project's deliverables meet established quality standards. It focuses on preventing defects and ensuring excellence."
     },
     {
         "_id": "37jdfgdf5673449plwq",
         "title": "Formatted Resume: Advanced Template",
         "short_description": "Land your dream job with Likho Resumes' Advanced Template. Create a standout resume that impresses employers.",
         "image": "https://i.ibb.co/pXBf0bR/k7.png",
-        "description": "Pave the way to your dream job with Likho Resumes' Advanced Template. This meticulously crafted resume template is your key to making your qualifications shine. It's designed to help you stand out from the competition and leave a lasting impression on employers. Highlight your skills, experience, and achievements with ease. The Advanced Template offers a comprehensive yet stylish approach to resume building. Impress recruiters, get noticed, and take the next step in your career journey. Don't settle for ordinary resumes; choose the extraordinary with Likho Resumes' Advanced Template."
+        "img_1": "https://i.ibb.co/F3K18M0/image.png",
+        "img_2": "https://i.ibb.co/pXBf0bR/k7.png",
+        "description": "Pave the way to your dream job with Likho Resumes' Advanced Template. This meticulously crafted resume template is your key to making your qualifications shine. It's designed to help you stand out from the competition and leave a lasting impression on employers. Highlight your skills, experience, and achievements with ease. The Advanced Template offers a comprehensive yet stylish approach to resume building. Impress recruiters, get noticed, and take the next step in your career journey. Don't settle for ordinary resumes; choose the extraordinary with Likho Resumes' Advanced Template.",
+        "sub_description": "Craft an exceptional resume that highlights your skills and qualifications. Impress employers and land your dream job."
     },
     {
         "_id": "45jdfgdf5673449qxsw",
         "title": "Job Promotion Letter Template",
         "short_description": "Craft a compelling job promotion letter with our customizable template.",
         "image": "https://i.ibb.co/sH51v9M/kt1.png",
-        "description": "Advance your career and celebrate your success with Likho Templates' Job Promotion Letter Template. Whether you're an employer congratulating an employee or an individual seeking to express gratitude for a well-deserved promotion, our template simplifies the process. Customize the content to suit your needs, add personal touches, and create a letter that reflects your genuine appreciation. Recognize achievements and milestones in style. Make your job promotion letter memorable with Likho Templates."
+        "img_1": "https://i.ibb.co/kXjM3tB/image.png",
+        "img_2": "https://i.ibb.co/sH51v9M/kt1.png",
+        "description": "Advance your career and celebrate your success with Likho Templates' Job Promotion Letter Template. Whether you're an employer congratulating an employee or an individual seeking to express gratitude for a well-deserved promotion, our template simplifies the process. Customize the content to suit your needs, add personal touches, and create a letter that reflects your genuine appreciation. Recognize achievements and milestones in style. Make your job promotion letter memorable with Likho Templates.",
+        "sub_description": "Express appreciation and celebrate job promotions with a customizable letter template."
+    },
+    {
+        "_id": "56jdfgdf5673449abcd",
+        "title": "Terms of Use Template for Websites with User-Generated Content",
+        "short_description": "Protect your website legally with Likho Templates' User-Generated Content Terms of Use template.",
+        "image": "https://i.ibb.co/cw9mw4p/Screenshot.png",
+        "img_1": "https://i.ibb.co/DKpf41V/image.png",
+        "img_2": "https://i.ibb.co/cw9mw4p/Screenshot.png",
+        "description": "Ensure your website complies with legal requirements and safeguards your content with Likho Templates' User-Generated Content Terms of Use Template. This template is tailored for websites that host user-generated content and need clear guidelines and rules. Customize it to match your specific needs, and provide users with the necessary terms and conditions to ensure a safe and compliant online environment. Protect your website, your users, and your content with this essential legal document.",
+        "sub_description": "Create legally compliant terms and conditions for websites with user-generated content. Safeguard your online environment."
+    },
+    {
+        "_id": "67jdfgdf5673449efgh",
+        "title": "Lesson Plan Template",
+        "short_description": "Streamline lesson planning with Likho Templates' Lesson Plan template. Organize your teaching materials and objectives.",
+        "image": "https://i.ibb.co/RpYQzgC/247.png",
+        "img_1": "https://i.ibb.co/rZDpcXz/image.png",
+        "img_2": "https://i.ibb.co/RpYQzgC/247.png",
+        "description": "Simplify your teaching process and create effective lesson plans with Likho Templates' Lesson Plan Template. This template provides educators with a structured format to outline objectives, teaching materials, activities, and assessment methods. Whether you're teaching in a classroom or online, our template helps you stay organized and ensures a seamless learning experience for your students. Elevate your teaching game with Likho Templates' Lesson Plan template.",
+        "sub_description": "Organize teaching materials and objectives with this lesson plan template. Simplify lesson planning for a seamless learning experience."
+    },
+    {
+        "_id": "78jdfgdf5673449ijkl",
+        "title": "Newsletter Templates",
+        "short_description": "Engage your audience with eye-catching newsletters using Likho Templates' Newsletter Templates.",
+        "image": "https://i.ibb.co/345DH1w/147.png",
+        "img_1": "https://i.ibb.co/263thBH/image.png",
+        "img_2": "https://i.ibb.co/345DH1w/147.png",
+        "description": "Captivate your readers and deliver compelling content with Likho Templates' Newsletter Templates. Our collection offers a variety of professionally designed templates that cater to different styles and purposes. Whether you're sending newsletters for marketing, announcements, or community updates, we have the perfect template for you. Customize the layout, colors, and content to match your brand and message. Enhance your communication and engage your audience effectively with Likho Templates' Newsletter Templates.",
+        "sub_description": "Create eye-catching newsletters for various purposes with our customizable templates. Engage your audience effectively."
+    },
+    {
+        "_id": "89jdfgdf5673449mnop",
+        "title": "Consulting Agreement Template",
+        "short_description": "Create solid consulting agreements with Likho Templates' Consulting Agreement Template.",
+        "image": "https://i.ibb.co/4djvvBM/124.png",
+        "img_1": "https://i.ibb.co/DLJRkTL/image.png",
+        "img_2": "https://i.ibb.co/4djvvBM/124.png",
+        "description": "Establish clear terms and expectations for your consulting services with Likho Templates' Consulting Agreement Template. This template is designed to simplify the process of creating legally binding agreements between consultants and clients. Customize the document to outline project scope, deliverables, payment terms, and other critical details. Protect your interests and ensure a smooth consulting relationship with a professionally drafted agreement. Elevate your consulting business with Likho Templates' Consulting Agreement Template.",
+        "sub_description": "Create legally compliant consulting agreements with this template. Define terms and expectations for consulting services."
     }
 ]
