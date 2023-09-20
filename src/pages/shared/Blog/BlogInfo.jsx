@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Container from '../Container';
+import { FaUserNinja } from 'react-icons/fa';
 
 const img_hosting_token = import.meta.env.VITE_Image;
 
@@ -18,15 +19,15 @@ const BlogInfo = () => {
 
     const onSubmit = (data) => {
         setIsSubmitting(true);
-    
+
         const formData = new FormData();
         formData.append('image', data.image[0]);
-    
+
         const currentDate = new Date().toLocaleString();
-    
+
         formData.append('date', currentDate);
         setSubmittedDate(currentDate);
-    
+
         fetch(hosting_img_url, {
             method: 'POST',
             body: formData
@@ -35,9 +36,9 @@ const BlogInfo = () => {
             .then(imgResponse => {
                 if (imgResponse.success) {
                     const imgURL = imgResponse.data.display_url;
-    
+
                     const { author_name, title, blog_content, sub_title, blog_description, email } = data;
-    
+
                     const blogForm = {
                         author_name,
                         title,
@@ -49,7 +50,7 @@ const BlogInfo = () => {
                         image: imgURL,
                         userPhotoURL: user.photoURL, // Include the user's photo URL
                     };
-    
+
                     axiosSecure.post('/blogPosts', blogForm)
                         .then(data => {
                             if (data.data.insertedId) {
@@ -71,7 +72,7 @@ const BlogInfo = () => {
                 setIsSubmitting(false);
             });
     };
-    
+
 
 
     return (
@@ -79,10 +80,16 @@ const BlogInfo = () => {
             <div className="blog-form font-poppins mt-16">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl text-center">Post Page</h1>
 
-                <div className="flex gap-5 justify-center   border-s-8 w-1/2 mx-auto bg-blue-100 border-purple-800 shadow-2xl p-8 font-poppins m-10 items-center">
-                    <div className="w-28 h-28 rounded-full overflow-hidden  border-purple-800">
-                        <img src={user.photoURL} alt="Profile" className="w-full h-full object-cover" />
-                    </div>
+                <div className="flex gap-5 justify-center border-s-8 w-1/2 mx-auto bg-blue-100 border-purple-800 shadow-2xl p-8 font-poppins m-10 items-center">
+                    {user.photoURL ? (
+                        <div className="w-28 h-28 rounded-full overflow-hidden border-purple-800">
+                            <img src={user.photoURL} alt="Profile" className="w-full h-full object-cover" />
+                        </div>
+                    ) : (
+                        <div className="w-28 h-28 rounded-full overflow-hidden border-purple-800 flex items-center justify-center bg-gray-200">
+                            <FaUserNinja className="w-20 h-20 text-gray-600" />
+                        </div>
+                    )}
 
                     <p className='border-t-8 h-4 border border-purple-800'></p>
 
@@ -92,6 +99,7 @@ const BlogInfo = () => {
                         <p className='text-gray-700 font-semibold'>{user?.email}</p>
                     </div>
                 </div>
+
 
 
                 <form onSubmit={handleSubmit(onSubmit)} className="p-4">
