@@ -3,6 +3,8 @@ import Container from "../shared/Container";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import TabsTemplates from "./TabsTemplates";
+
 
 
 const TemplatesDetailsInfo = ({ templateInfo }) => {
@@ -56,6 +58,8 @@ const TemplatesDetailsInfo = ({ templateInfo }) => {
                         <TabList className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-8 border-b-2 w-full border-gray-500">
                             <Tab className="border-b-4 p-2 text-center border-lime-300 border-transparent hover:border-lime-300">
                                 Template Update
+
+
                             </Tab>
                             <Tab className="border-b-4 p-2 border-lime-300 border-transparent hover:border-lime-300">
                                 Real-Time Collaboration
@@ -64,11 +68,15 @@ const TemplatesDetailsInfo = ({ templateInfo }) => {
                             {/*   Up */}
                         </TabList>
                     </div>
-                    
+
+                    {/* sub */}
+
                     <p className="border-b-4"></p>
                     <TabPanel>
-                        <h2>Template Update</h2>
-                        <p>Here is information about template updates.</p>
+
+
+                      <TabsTemplates/>
+
                         {/* Add any other content or components related to this tab */}
                     </TabPanel>
                     <TabPanel>

@@ -13,7 +13,7 @@ const AllUser = () => {
             return res.data
         }
     })
-    // console.log(users)
+    console.log(users)
 
     return (
         <div className="overflow-x-auto">
@@ -24,7 +24,7 @@ const AllUser = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th></th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>

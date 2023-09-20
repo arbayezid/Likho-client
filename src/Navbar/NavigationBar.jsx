@@ -9,7 +9,7 @@ const NavigationBar = () => {
   console.log(user);
   const [dbUser, setDbUser] = useState({});
   useEffect(() => {
-    fetch(`https://likho-backend.onrender.com/users/${user?.email}`)
+    fetch(`http://localhost:5000/users/${user?.email}`)
         .then(res => res.json())
         .then(data => setDbUser(data)
 
@@ -85,7 +85,7 @@ console.log(dbUser);
             </div>
 
             <Link to={"/"} className="text-3xl">
-              <span className="bg-blue-400 p-1  rounded">L</span>ikho
+              <span className="bg-white-400 p-1  rounded">L</span>ikho
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex ">

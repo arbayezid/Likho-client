@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/QkHW0qm/one.png",
+        "title": "Converting Word to PDF",
+        "desc": "Learn how to convert Microsoft Word documents to PDF format effortlessly."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/njP4q5h/two.png",
+        "title": "PDF Conversion Tools",
+        "desc": "Discover the best tools and software for converting Word documents to PDF efficiently."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/hfmsJdK/three.png",
+        "title": "Batch Conversion Methods",
+        "desc": "Explore methods for batch converting multiple Word files to PDF in a single go."
+    }
+]

@@ -9,7 +9,7 @@ const UpdateProfile = () => {
 
 
     useEffect(() => {
-        fetch(`https://likho-backend.onrender.com/users/${user?.email}`)
+        fetch(`http://localhost:5000/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setDbUser(data)
 
@@ -31,7 +31,7 @@ const UpdateProfile = () => {
 
 
         // send data to server
-        fetch(`https://likho-backend.onrender.com/users/${dbUser?._id}`, {
+        fetch(`http://localhost:5000/users/${dbUser?._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
