@@ -39,6 +39,8 @@ import Stats from "../pages/Dashboard/AdminDashBoard/Stats/Stats";
 import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
+import BlogInfo from "../pages/shared/Blog/BlogInfo";
+import BlogPostDetailsInfo from "../pages/shared/Blog/BlogPostDetailsInfo";
 
 
 
@@ -148,7 +150,15 @@ const router = createBrowserRouter([
       {
         path: 'templatesdetails/:id',
         element: <TemplatesDetails></TemplatesDetails>
-      }
+      },
+      {
+        path: 'bloginfo',
+        element: <BlogInfo></BlogInfo>
+      },
+      {
+        path: 'blogpostdetailsinfo/:id',
+        element: <BlogPostDetailsInfo></BlogPostDetailsInfo>
+      },
     ]
   },
   {
@@ -181,17 +191,18 @@ const router = createBrowserRouter([
         element: <UpdateProfile></UpdateProfile>
       },
       {
-        path:'template',
-        element:<DashBoardTemplate></DashBoardTemplate>
+        path: 'template',
+        element: <DashBoardTemplate></DashBoardTemplate>
       },
       {
-        path:'alluser',
-        element:<AllUser></AllUser>
+        path: 'alluser',
+        element: <AllUser></AllUser>
       },
       {
-        path:'stats',
-        element:<Stats></Stats>
-      }
+        path: 'stats',
+        element: <Stats></Stats>
+      },
+
 
 
     ]

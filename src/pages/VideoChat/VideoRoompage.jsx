@@ -27,6 +27,8 @@ const VideoRoompage = () => {
     };
     return (
         <div className="w-full flex justify-center mt-28 mb-20">
+
+           
             <div ref={myMeeting} />
         </div>
     );

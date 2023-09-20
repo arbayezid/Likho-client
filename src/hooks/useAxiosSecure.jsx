@@ -7,7 +7,7 @@ import useAuth from "./useAuth";
 
 
 const axiosSecure = axios.create({
-    baseURL: "https://likho-7e3d6.web.app"
+    baseURL: "https://likho-backend.onrender.com"
 })
 
 const useAxiosSecure = () => {

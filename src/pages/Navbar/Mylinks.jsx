@@ -73,8 +73,9 @@ export const links = [
         Head: "Resources Overview",
         sublink: [
           { icon: <FaPenSquare />, name: "Blog", link: "/blog" },
+          { icon: <FaReadme />, name: "Blog Post", link: "/bloginfo" },
           { icon: <FaSuitcaseRolling />, name: "Likho studies", link: "/" },
-          { icon: <FaReadme />, name: "Solutions", link: "/" },
+          
           // { name: "Documentation", link: "/" },
           { icon: <FaStreetView />, name: "Insights", link: "/" },
         ],

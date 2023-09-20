@@ -34,8 +34,8 @@ const Dashboard = () => {
 
 
 
-                    { useAdmins && <AdminDashboard></AdminDashboard>}
-                    { useUsers && <UserDashboard></UserDashboard> }
+                    {useAdmins && <AdminDashboard></AdminDashboard>}
+                    {useUsers && <UserDashboard></UserDashboard>}
 
                 </ul>
 

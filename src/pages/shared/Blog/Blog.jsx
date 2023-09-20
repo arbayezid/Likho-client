@@ -2,14 +2,17 @@ import React from 'react';
 
 import { FaChevronRight } from 'react-icons/fa';
 import Container from '../Container';
+import BlogInfo from './BlogInfo';
+import BlogDetails from './BlogDetails';
+import { Link } from 'react-router-dom';
 
 
 const Blog = () => {
     return (
-        <div className="pt-10">
+        <div className="">
             <div className='bg-blue-50'>
 
-                <div className=" mt-10 p-20">
+                <div className=" p-20">
                     <div className="space-y-2 font-thin">
                         <h2 className='text-blue-600 text-center text-xl font-bold'>Blog</h2>
                         <h4 className='text-center text-gray-800 text-4xl font-bold'>The <span className='text-blue-600'>Latest</span> About Likho</h4>
@@ -36,9 +39,10 @@ const Blog = () => {
                                         <p className='text-xs font-mono'>Wed Aug 24 2023</p>
                                     </div>
 
-                                    <p className="flex items-center gap-2 text-blue-800 font-bold text-xs">
-                                        Read More <FaChevronRight className="text-xs" />
-                                    </p>
+                                    <Link to='/features'>
+                                        <p className="flex items-center gap-2 text-blue-800 font-bold text-xs">
+                                            Read More <FaChevronRight className="text-xs" />
+                                        </p></Link>
                                 </div>
 
 
@@ -53,7 +57,7 @@ const Blog = () => {
 
                                 </div>
                                 <h2 className='text-xl text-gray-700 font-bold'>LIKHO is now on Chat Assistance! </h2>
-                                <p className='text-gray-600 font-mono'>Support for time zones, Charts in alpha, Data Grid filtering, and more.</p>
+                                <p className='text-gray-600 font-mono'>Hire a virtual assistant from Likho that does your administrative tasks and much more</p>
 
 
 
@@ -64,9 +68,10 @@ const Blog = () => {
                                         <p className='text-xs font-mono'>Wed Aug 24 2023</p>
                                     </div>
 
-                                    <p className="flex items-center gap-2 text-blue-800 font-bold text-xs">
-                                        Read More <FaChevronRight className="text-xs" />
-                                    </p>
+                                    <Link to='/room'>
+                                        <p className="flex items-center gap-2 text-blue-800 font-bold text-xs">
+                                            Read More <FaChevronRight className="text-xs" />
+                                        </p></Link>
                                 </div>
 
 
@@ -79,33 +84,10 @@ const Blog = () => {
                 </div>
                 {/* Post  &  Blog   */}
 
-                <div className="bg-gray-50 p-20">
 
-                    <Container>
-                        <h1 className='text-gray-700 font-bold text-xl mx-16'>Posts</h1>
-                        <h1 className='text-gray-700 font-bold text-xl mx-16'>Update Post ...TO DO...</h1>
-
-                    </Container>
-
-
-
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <Container>
+                    <BlogDetails />
+                </Container>
 
             </div>
         </div>
