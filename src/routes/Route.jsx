@@ -35,7 +35,6 @@ import MathFeatures from "../pages/LikhoEditor7.1/Features/MathFeatures";
 import TemplatesDemo from "../pages/TemplatesDemo/TemplatesDemo";
 import TemplatesDetails from "../pages/TemplatesDemo/TemplatesDetails";
 import ErrorPage from "../pages/Error/ErrorPage";
-import Stats from "../pages/Dashboard/AdminDashBoard/Stats/Stats";
 import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
@@ -43,6 +42,7 @@ import DemoPage from "../DemoPage/DemoPage";
 import SingleDemo from "../DemoPage/SingleDemo";
 import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 import ImportFromWord from "../pages/LikhoEditor7.1/Features/ImportFromWord/ImportFromWord";
+import Stats from "../pages/Dashboard/AdminDashboard/Stats/Stats";
 // import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 
 
@@ -163,6 +163,10 @@ const router = createBrowserRouter([
       {
         path: 'templatesdetails/:id',
         element: <TemplatesDetails></TemplatesDetails>
+      },
+      {
+        path : "importFromWord",
+        element : <ImportFromWord></ImportFromWord>
       }
     ]
   },
