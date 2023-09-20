@@ -1,4 +1,4 @@
-import Footer from "../../../shared/Footer";
+
 import ContactSection from "./ContactSection/ContactSection";
 import ExportCards from "./ExportCards/ExportCards";
 import ExportPdfBanner from "./ExportPdfBanner";
@@ -16,7 +16,7 @@ const ExportToPdf = () => {
            <ExportToPdfSection></ExportToPdfSection>
            <ExportToWordSection></ExportToWordSection>
            <ContactSection></ContactSection>
-           <Footer></Footer>
+           
         </div>
     );
 };
