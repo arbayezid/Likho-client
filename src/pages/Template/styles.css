@@ -1,0 +1,17 @@
+/* Add this to your CSS file or styles */
+.custom-button {
+    border: 1px solid #ccc; /* Customize the border styles as needed */
+    text-align: center;
+    background-color: #f0f0f0; /* Customize the background color */
+    color: #333; /* Customize the text color */
+    font-size: 16px; /* Customize the font size */
+    padding: 8px 16px; /* Customize the padding */
+    border-radius: 4px; /* Customize the border radius */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #e0e0e0; /* Customize the hover background color */
+    border-color: #999; /* Customize the hover border color */
+}
