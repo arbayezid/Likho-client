@@ -65,15 +65,19 @@ const Features = () => {
               {/* Sidebar content here */}
               <h4 className='text-xl font-semibold font-roboto text-blue-950 px-4  mb-5'>Ultra Features</h4>
               <div className="text-gray-600 font-normal">
-                <li><a>Comments</a></li>
-                <li className=" hover:text-purple-500"><a>Revision History</a></li>
                 <li><a>Real-time Collaboration</a></li>
                 <li><a>Import from Word</a></li>
                 <li><a>Export to PDF and Word</a></li>
+                <li><a>Math equations</a></li>
+                <li><a>Comments</a></li>
+                <li className=" hover:text-purple-500"><a>Revision History</a></li>
+
+                
+               
                 <li><a>Spell and grammar check</a></li>
                 <li><a>Pagination</a></li>
-                <li><a>Pagination</a></li>
-                <li><a>Math equations</a></li>
+               
+                
               </div>
 
               <h4 className='text-xl font-semibold font-[Poppins] text-blue-950 px-4  mb-5 mt-5'>Pro Features</h4>
