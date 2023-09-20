@@ -39,6 +39,8 @@ import Stats from "../pages/Dashboard/AdminDashBoard/Stats/Stats";
 import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
+import DemoPage from "../DemoPage/DemoPage";
+import SingleDemo from "../DemoPage/SingleDemo";
 import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
 import ImportFromWord from "../pages/LikhoEditor7.1/Features/ImportFromWord/ImportFromWord";
 // import ExportToPdf from "../pages/LikhoEditor7.1/Features/ExportToPdf/ExportToPdf";
@@ -77,7 +79,7 @@ const router = createBrowserRouter([
         element: <UpdateProfile></UpdateProfile>
       },
       {
-        path: '/editor',
+        path: '/customeditor',
         element: <CustomEditor></CustomEditor>
       },
       {
@@ -91,7 +93,7 @@ const router = createBrowserRouter([
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({ params }) => fetch(`https://likho-backend.onrender.com/users/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
       },
       {
         path: 'template',
@@ -105,7 +107,7 @@ const router = createBrowserRouter([
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
         loader: ({ params }) =>
-          fetch(`https://likho-backend.onrender.com/users/${params.id}`)
+          fetch(`http://localhost:5000/users/${params.id}`)
       },
       {
         path: "/chat",
@@ -133,16 +135,34 @@ const router = createBrowserRouter([
         element: <VideoRoompage></VideoRoompage>
       },
       {
-        path: 'features',
+        path: '/features',
         element: <Features></Features>
+      },
+      {
+        path: '/demo',
+        element: <DemoPage></DemoPage>
+      },
+      {
+        path: '/demopage/:id',
+        element:<SingleDemo></SingleDemo>,
+          loader: ({params}) =>fetch(`http://localhost:5000/demo/${params.id}`)
+        
       },
       {
         path: "exportPdfToWord",
         element: <ExportToPdf></ExportToPdf>
       },
       {
-        path : "importFromWord",
-        element : <ImportFromWord></ImportFromWord>
+        path: "/help",
+        element: <Help></Help>
+      },
+      {
+        path: 'templatesdemo',
+        element: <TemplatesDemo></TemplatesDemo>
+      },
+      {
+        path: 'templatesdetails/:id',
+        element: <TemplatesDetails></TemplatesDetails>
       }
     ]
   },

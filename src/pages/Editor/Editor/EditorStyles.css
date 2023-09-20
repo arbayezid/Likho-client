@@ -1,4 +1,20 @@
 .ql-editor {
-    min-height: 400px;
-    /* Adjust the height as needed */
+    height: 100%;
+    padding: 20px;
+    /* Adjust as needed */
+    box-sizing: border-box;
+   
+
+}
+
+.editor-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: white;
+   
 }
