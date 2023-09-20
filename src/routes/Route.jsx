@@ -39,6 +39,8 @@ import Stats from "../pages/Dashboard/AdminDashBoard/Stats/Stats";
 import AllUser from "../pages/Dashboard/AdminDashBoard/AllUser/AllUser";
 import ContactUs from "../pages/Contact Us/ContactUs";
 import Help from "../pages/Help Center/Help";
+import DemoPage from "../DemoPage/DemoPage";
+import SingleDemo from "../DemoPage/SingleDemo";
 
 
 
@@ -74,7 +76,7 @@ const router = createBrowserRouter([
         element: <UpdateProfile></UpdateProfile>
       },
       {
-        path: '/editor',
+        path: '/customeditor',
         element: <CustomEditor></CustomEditor>
       },
       {
@@ -130,8 +132,18 @@ const router = createBrowserRouter([
         element: <VideoRoompage></VideoRoompage>
       },
       {
-        path: 'features',
+        path: '/features',
         element: <Features></Features>
+      },
+      {
+        path: '/demo',
+        element: <DemoPage></DemoPage>
+      },
+      {
+        path: '/demopage/:id',
+        element:<SingleDemo></SingleDemo>,
+          loader: ({params}) =>fetch(`http://localhost:5000/demo/${params.id}`)
+        
       },
       {
         path: "/contact-us",
