@@ -16,10 +16,10 @@ const AllUser = () => {
     console.log(users)
 
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto text-xl">
             <table className="table">
                 {/* head */}
-                <thead>
+                <thead className='text-xl'>
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
@@ -27,7 +27,7 @@ const AllUser = () => {
                         <th>Details</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='text-xl'>
 
                 {
                     users?.map(user=> <SingleUser key={user._id} user={user}></SingleUser> )

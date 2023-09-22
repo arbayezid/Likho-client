@@ -55,7 +55,7 @@ const Button = () => {
                   Profile
                 </Link>
                 <Link
-                  to="/dashboard"
+                  to="/dashboard/newDoc"
                   className="font-normal hover:font-semibold"
                 >
                   Dashboard
