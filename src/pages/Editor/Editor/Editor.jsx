@@ -1,12 +1,15 @@
+
+
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './EditorStyles.css'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// Import pdf-puppeteer library
+
 function CustomEditor() {
     const [editorHtml, setEditorHtml] = useState('');
-    // const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFile, setSelectedFile] = useState(null);
 
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     let synth = null;
@@ -34,23 +37,55 @@ function CustomEditor() {
     };
 
     // for formating
-    const handleFileSelection = (event) => {
+    // const handleFileSelection = (event) => {
+    //     const file = event.target.files[0];
+
+    //     const reader = new FileReader();
+    //     reader.onload = (e) => {
+    //         const fileContent = e.target.result;
+
+    //         // Wrap the file content with HTML tags for basic formatting
+    //         const formattedContent = `<div>${fileContent}</div>`;
+
+    //         setEditorHtml(formattedContent);
+    //     };
+    //     reader.readAsText(file);
+
+
+    // };
+
+    const handleFileSelection = async (event) => {
         const file = event.target.files[0];
 
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const fileContent = e.target.result;
+        if (file) {
+            setSelectedFile(file);
 
-            // Wrap the file content with HTML tags for basic formatting
-            const formattedContent = `<div>${fileContent}</div>`;
+            // Check file extension to handle different file types
+            if (file.name.endsWith('.txt')) {
+                // For .txt files, read and set content as plain text
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const fileContent = e.target.result;
+                    setEditorHtml(fileContent);
+                };
+                reader.readAsText(file);
+            } else if (file.name.endsWith('.docx')) {
+                const formData = new FormData();
+                formData.append('document', file);
 
-            setEditorHtml(formattedContent);
-        };
-        reader.readAsText(file);
-        
-  
-};
-      
+                try {
+                    const response = await axios.post('http://localhost:5000/convert/docx2html', formData);
+                    const docxHtmlContent = response.data;
+
+                    // Display the HTML content with images in the editor
+                    setEditorHtml(docxHtmlContent);
+                } catch (error) {
+                    console.error('Error converting .docx to HTML:', error);
+                }
+            }
+        }
+    };
+
 
     const handleDownload = () => {
         const blob = new Blob([editorHtml], { type: 'text/plain' });
@@ -79,12 +114,13 @@ function CustomEditor() {
             console.log('Web Share API not supported in this browser.');
         }
     };
+
     const handleDocxToPdfConversion = async () => {
         try {
             const formData = new FormData();
-            formData.append('document', );
+            formData.append('document', selectedFile);
 
-            const response = await axios.post('https://likho-backend.onrender.com/convert/docx2pdf', formData, {
+            const response = await axios.post('http://localhost:5000/convert/docx2pdf', formData, {
                 responseType: 'arraybuffer',
             });
 
@@ -97,11 +133,23 @@ function CustomEditor() {
         }
     };
 
+
+
+
+
+
     const handleTextToPdfConversion = async () => {
         try {
-            const response = await axios.post('https://likho-backend.onrender.com/convert/text2pdf', { text: editorHtml }, {
-                responseType: 'arraybuffer',
-            });
+            // Remove the <p> tags from the editorHtml content
+            const sanitizedHtml = editorHtml.replace(/<\/?p>/g, '');
+
+            const response = await axios.post(
+                'http://localhost:5000/convert/text2pdf',
+                { text: sanitizedHtml }, // Use sanitizedHtml instead of editorHtml
+                {
+                    responseType: 'arraybuffer',
+                }
+            );
 
             const pdfBlob = new Blob([response.data], { type: 'application/pdf' });
             const pdfUrl = URL.createObjectURL(pdfBlob);
@@ -111,6 +159,7 @@ function CustomEditor() {
             console.error('Error converting text to PDF:', error);
         }
     };
+
 
 
 
@@ -126,29 +175,36 @@ function CustomEditor() {
 
     const quillFormats = [
         'bold', 'italic', 'underline', 'strike',
-        'list', 'bullet', 'link', 'image', 'video'
+        'list', 'bullet', 'link', 'image', 'video',
         // ... Add more formats here if needed
     ];
 
     return (
-        <div className='mt-5'>
-            
-            <button className='px-2' onClick={handleVoiceButtonClick}>Start Voice</button>
-            <button className='px-2'  onClick={handleReadAloud}>Read Aloud</button>
-             <input type="file" accept=".txt" onChange={handleFileSelection} />
-            <button className='px-2'  onClick={handleDownload}>Download</button>
-            <button className='px-2'  onClick={handleShare}>Share</button>
-            <button className='px-2'  onClick={handleDocxToPdfConversion}> Docx to PDF</button>
-            <button className='px-2'  onClick={handleTextToPdfConversion}>Text to PDF</button>
-            <Link to="/room" >Video Chat</Link>
+        <div >
+            <div className='grid grid-cols-2 justify-around items-center '>
+            <div>
+                <input type="file" accept=".txt,.docx" onChange={handleFileSelection} />
+                <button className="px-2" onClick={handleDocxToPdfConversion}> Docx to PDF</button>
+                <button className="px-2" onClick={handleTextToPdfConversion}>Text to PDF</button>
+                <button className="px-2" onClick={handleDownload}>Download</button>
+                <button className="px-2" onClick={handleShare}>Share</button>
+            </div>
+            <div>
+                <button className="px-2" onClick={handleVoiceButtonClick}>Start Voice</button>
+                <button className="px-2" onClick={handleReadAloud}>Read Aloud</button>
+                
+            </div>
+            </div>
 
-            <ReactQuill 
-                value={editorHtml}
-                onChange={setEditorHtml}
-                modules={quillModules}
-                formats={quillFormats}
-            />
-
+            <div className="editor-wrapper">
+                <ReactQuill
+                    value={editorHtml}
+                    onChange={setEditorHtml}
+                    modules={quillModules}
+                    formats={quillFormats}
+                    style={{ height: '27cm', width: '20cm', backgroundColor: "white" }} // A4 paper size
+                />
+            </div>
         </div>
     );
 }
