@@ -12,7 +12,7 @@ const useAdmin = () => {
     const {data: isAdmin, isLoading: isAdminLoading} = useQuery({
         queryKey: ['isAdmin', user?.email],
         queryFn: async () =>{
-            const res = await axios.get(`https://likho-backend.onrender.com/admin/${user?.email}`)
+            const res = await axios.get(`http://localhost:5000/admin/${user?.email}`)
             // console.log('admin response',res)
             return res.data.admin;
             

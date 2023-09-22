@@ -56,11 +56,11 @@ const ContactUs = () => {
                         </div>
                         <div>
                             <label className='font-medium text-sm'>Message</label><br />
-                            <textarea className='md:w-[500px] h-[218px] p-3 rounded-lg mt-1' name="user_message" placeholder='Your Message *' required />
+                            <textarea className='md:w-[500px] h-[218px] p-3 rounded-lg mt-1' name="user_message " placeholder='Your Message *' required />
                         </div>
                     </div>
                     <div className='text-center mt-3'>
-                        <input className='btn bg-purple-600 rounded-lg text-white hover:bg-purple-300' type="submit" value="Send Message" />
+                        <input className='btn bg-purple-600 rounded-lg text-white hover:bg-purple-300' type="submit" value="Send  Message" />
                     </div>
                 </form>
             </div>

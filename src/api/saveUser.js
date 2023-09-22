@@ -9,7 +9,7 @@ const saveUser = (user) => {
         name: user.displayName
     }
 
-    axios.put(`https://likho-backend.onrender.com/users/${user?.email}`, currentUser)
+    axios.put(`http://localhost:5000/users/${user?.email}`, currentUser)
         .then(data => {
             console.log(data)
         })

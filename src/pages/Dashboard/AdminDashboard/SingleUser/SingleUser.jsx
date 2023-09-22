@@ -1,8 +1,23 @@
 
+import axios from 'axios';
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-const SingleUser = ({user}) => {
+const SingleUser = ({ user }) => {
+
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:5000/user/${id}`)
+            .then(data => {
+                if (data.data.deleteCount > 0) {
+                    toast('user deleted successfully')
+                }
+
+                console.log(data.data)
+            })
+
+    }
 
     return (
         <tr>
@@ -21,12 +36,13 @@ const SingleUser = ({user}) => {
                 </div>
             </td> */}
             <td>
-               {user.name}
+                <ToastContainer></ToastContainer>
+                {user.name}
             </td>
             <td> {user.email}</td>
             <td> {user.role}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button onClick={() => handleDelete(user._id)} className="btn btn-neutral ">Delete</button>
             </th>
         </tr>
     );
