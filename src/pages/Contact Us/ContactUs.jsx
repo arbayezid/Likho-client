@@ -60,7 +60,7 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <div className='text-center mt-3'>
-                        <input className='btn bg-purple-600 rounded-lg text-white hover:bg-purple-300' type="submit" value="Send Message" />
+                        <input className='btn bg-purple-600 rounded-lg text-white hover:bg-purple-300' type="submit" value="Send  Message" />
                     </div>
                 </form>
             </div>
