@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://likho-backend-himlaoy.vercel.app",
   "dependencies": {
     "@ckeditor/ckeditor5-alignment": "^39.0.2",
     "@ckeditor/ckeditor5-basic-styles": "^39.0.2",
