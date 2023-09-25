@@ -31,7 +31,7 @@ const Drags = () => {
                 <h1 className='text-3xl ml-3 font-bold'>Create New Document</h1>
                 <hr className='my-5'/>
                 <div className='grid lg:grid-cols-2  gap-0'>
-                    <div className='w-3/5 m-auto  justify-center items-center'>
+                    <div className='w-3/5 m-auto   justify-center items-center'>
                         <div className='border rounded-md mt-8'>
                             <div className='border p-2 px-2 py-4  border-b-gray-300 inline-flex justify-center items-center gap-2 w-full'>
                                 <Link className='inline-flex justify-center items-center gap-2 w-full font-bold text-xl'><FaDochub ></FaDochub> <p>your Document</p></Link>
