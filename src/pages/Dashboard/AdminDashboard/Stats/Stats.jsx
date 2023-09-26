@@ -9,7 +9,7 @@ const Stats = () => {
     const { data: documents = [] } = useQuery({
         queryKey: ['documents'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/documents')
+            const res = await axios.get('https://likho-backend-himlaoy.vercel.app/documents')
             return res.data
         }
     })

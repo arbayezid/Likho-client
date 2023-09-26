@@ -19,7 +19,7 @@ const MyProfile = () => {
 
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/users?email=${user?.email}`)
+    //     fetch(`https://likho-backend-himlaoy.vercel.app/users?email=${user?.email}`)
     //         .then(res => res.json())
     //         .then(data => setDbUser(data)
             
@@ -29,7 +29,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://likho-backend-himlaoy.vercel.app/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setDbUser(data)
             
@@ -44,7 +44,7 @@ const MyProfile = () => {
         console.log(updateUserInfo);
           
 
-    //     fetch(`http://localhost:5000/users`, {
+    //     fetch(`https://likho-backend-himlaoy.vercel.app/users`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'
