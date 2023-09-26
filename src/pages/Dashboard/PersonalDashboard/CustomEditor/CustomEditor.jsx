@@ -77,7 +77,7 @@ function CustomEditor() {
             formData.append('document', file);
     
             try {
-              const response = await axios.post('http://localhost:5000/convert/docx2html', formData);
+              const response = await axios.post('https://likho-backend-himlaoy.vercel.app/convert/docx2html', formData);
               const docxHtmlContent = response.data;
     
               // Display the HTML content with images in the editor
@@ -123,7 +123,7 @@ function CustomEditor() {
             const formData = new FormData();
             formData.append('document', selectedFile);
 
-            const response = await axios.post('http://localhost:5000/convert/docx2pdf', formData, {
+            const response = await axios.post('https://likho-backend-himlaoy.vercel.app/convert/docx2pdf', formData, {
                 responseType: 'arraybuffer',
             });
 
@@ -147,7 +147,7 @@ function CustomEditor() {
           const sanitizedHtml = editorHtml.replace(/<\/?p>/g, '');
       
           const response = await axios.post(
-            'http://localhost:5000/convert/text2pdf',
+            'https://likho-backend-himlaoy.vercel.app/convert/text2pdf',
             { text: sanitizedHtml }, // Use sanitizedHtml instead of editorHtml
             {
               responseType: 'arraybuffer',

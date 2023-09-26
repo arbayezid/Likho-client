@@ -75,6 +75,10 @@ const router = createBrowserRouter([
         element: <ForgotPassword></ForgotPassword>
       },
       {
+        path:"/contact-us",
+        element:<ContactUs></ContactUs>
+      },
+      {
         path: '/profile',
         element: <UpdateProfile></UpdateProfile>
       },
@@ -93,7 +97,7 @@ const router = createBrowserRouter([
       {
         path: '/profile/:id',
         element: <MyProfile></MyProfile>,
-        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
+        loader: ({ params }) => fetch(`https://likho-backend-himlaoy.vercel.app/users/${params.id}`)
       },
       {
         path: 'template',
@@ -107,7 +111,7 @@ const router = createBrowserRouter([
         path: "/updateProfile/:id",
         element: <UpdateProfile></UpdateProfile>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/users/${params.id}`)
+          fetch(`https://likho-backend-himlaoy.vercel.app/users/${params.id}`)
       },
       {
         path: "/chat",
@@ -145,7 +149,7 @@ const router = createBrowserRouter([
       {
         path: '/demopage/:id',
         element:<SingleDemo></SingleDemo>,
-          loader: ({params}) =>fetch(`http://localhost:5000/demo/${params.id}`)
+          loader: ({params}) =>fetch(`https://likho-backend-himlaoy.vercel.app/demo/${params.id}`)
         
       },
       {

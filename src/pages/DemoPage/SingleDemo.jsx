@@ -8,7 +8,7 @@ const SingleDemo = () => {
     const [demoPage, setDemoPage] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/demo/${seeDemo?._id}`)
+        fetch(`https://likho-backend-himlaoy.vercel.app/demo/${seeDemo?._id}`)
             .then(res => res.json())
             .then(data => setDemoPage(data))
     }, [seeDemo?._id]);

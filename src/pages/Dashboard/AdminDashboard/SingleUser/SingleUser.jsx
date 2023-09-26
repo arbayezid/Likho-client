@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const SingleUser = ({ user }) => {
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/user/${id}`)
+        axios.delete(`https://likho-backend-himlaoy.vercel.app/user/${id}`)
             .then(data => {
                 if (data.data.deleteCount > 0) {
                     toast('user deleted successfully')

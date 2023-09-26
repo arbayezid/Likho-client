@@ -9,7 +9,7 @@ const NavigationBar = () => {
   console.log(user);
   const [dbUser, setDbUser] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`https://likho-backend-himlaoy.vercel.app/users/${user?.email}`)
         .then(res => res.json())
         .then(data => setDbUser(data)
 
